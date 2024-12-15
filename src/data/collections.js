@@ -7,7 +7,13 @@ export const collections = {
       category: "Note Taking",
       color: "#2E3338",
     },
-    // Add more items...
+    {
+      id: 2,
+      title: "Obsidian",
+      url: "https://obsidian.md",
+      category: "Note Taking",
+      color: "#7C3AED",
+    },
   ],
   development: [
     {
@@ -17,7 +23,28 @@ export const collections = {
       category: "Version Control",
       color: "#24292F",
     },
-    // Add more development tools...
+    {
+      id: 4,
+      title: "VS Code",
+      url: "https://code.visualstudio.com",
+      category: "Code Editor",
+      color: "#007ACC",
+    },
   ],
-  // ... other categories
+  design: [
+    {
+      id: 5,
+      title: "Figma",
+      url: "https://figma.com",
+      category: "Design Tool",
+      color: "#1E1E1E",
+    },
+    {
+      id: 6,
+      title: "Dribbble",
+      url: "https://dribbble.com",
+      category: "Inspiration",
+      color: "#EA4C89",
+    },
+  ],
 };

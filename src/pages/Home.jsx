@@ -1,39 +1,11 @@
-import { Link } from "react-router-dom";
 import LinkCard from "@components/LinkCard";
+import Navigation from "@components/Navigation";
 import { Coffee, ChaoticGood, Pilot, Plants, MechanicalLove } from "@assets";
 
 const Home = () => {
   return (
     <div className="min-h-screen bg-zinc-50 relative">
-      {/* Header */}
-      <nav className="sticky top-0 bg-white/80 backdrop-blur-sm z-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center justify-between py-4">
-            <div className="flex items-center">
-              <h1 className="text-sm font-medium">
-                <span className="text-zinc-900">ScientificDevs</span>
-                <span className="text-blue-500">/F</span>
-              </h1>
-              <div className="h-4 mx-4 w-px bg-zinc-200" />
-              <span className="text-xs text-zinc-400 font-mono">v1.0.0</span>
-            </div>
-            <div className="flex items-center space-x-6">
-              <Link
-                to="/collections"
-                className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors no-underline"
-              >
-                Collections
-              </Link>
-              <Link
-                to="/about"
-                className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors no-underline"
-              >
-                About
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation currentPage="home" />
 
       {/* Decorative SVGs */}
       <img

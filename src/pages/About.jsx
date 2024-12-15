@@ -1,39 +1,10 @@
-import { Link } from "react-router-dom";
-import {
-  Pondering,
-  Reflecting,
-  MeelaPantalones,
-  Pacheco,
-  PolkaPup,
-} from "@assets";
+import Navigation from "@components/Navigation";
+import { Pondering, Reflecting, MeelaPantalones, Pacheco, PolkaPup } from "@assets";
 
 const About = () => {
   return (
     <div className="min-h-screen bg-zinc-50 relative">
-      {/* Header */}
-      <nav className="sticky top-0 bg-white/80 backdrop-blur-sm z-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center justify-between py-4">
-            <div className="flex items-center">
-              <Link
-                to="/"
-                className="text-sm font-medium hover:text-zinc-900 transition-colors no-underline"
-              >
-                <span className="text-zinc-900">ScientificDevs</span>
-                <span className="text-blue-500">/F</span>
-              </Link>
-              <div className="h-4 mx-4 w-px bg-zinc-200" />
-              <span className="text-zinc-500">About</span>
-            </div>
-            <Link
-              to="/collections"
-              className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors no-underline"
-            >
-              Collections
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navigation currentPage="about" />
 
       {/* Decorative SVGs */}
       <img
@@ -57,12 +28,10 @@ const About = () => {
             </div>
             <div className="space-y-4 text-sm text-zinc-600">
               <p className="font-mono">
-                <span className="text-blue-500">$</span> A minimal collection of
-                tools and resources
+                <span className="text-blue-500">$</span> A minimal collection of tools and resources
               </p>
               <p className="font-mono">
-                <span className="text-blue-500">$</span> Built with React +
-                Tailwind
+                <span className="text-blue-500">$</span> Built with React + Tailwind
               </p>
             </div>
           </section>
