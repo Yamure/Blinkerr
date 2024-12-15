@@ -8,7 +8,7 @@ ScientificDevs/F is a personal collection of essential tools, resources, and lin
 
 ## Tech Stack
 
-- React 
+- React
 - Tailwind CSS
 - React Router
 - Vite
