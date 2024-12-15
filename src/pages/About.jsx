@@ -11,7 +11,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-zinc-50 relative">
       {/* Header */}
-      <nav className="sticky top-0 bg-white/80 backdrop-blur-sm border-b border-zinc-200 z-50">
+      <nav className="sticky top-0 bg-white/80 backdrop-blur-sm z-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between py-4">
             <div className="flex items-center">
