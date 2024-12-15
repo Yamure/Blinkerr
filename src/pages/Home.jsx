@@ -4,7 +4,7 @@ import { Coffee, ChaoticGood, Pilot, Plants, MechanicalLove } from "@assets";
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-zinc-50 relative">
+    <div className="min-h-screen grainy bg-[#FAFAF9] relative">
       <Navigation currentPage="home" />
 
       {/* Decorative SVGs */}
