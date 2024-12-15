@@ -2,14 +2,14 @@ import PropTypes from "prop-types";
 
 const LinkCard = ({ link }) => {
   const backgroundColor = `${link.color}15`; // This is for the icon
-  const cardBackground = `${link.color}20`; // Increased opacity from 08 to 20 for more visibility
+  const cardBackground = `${link.color}20`; // Color background for larger screens
 
   return (
     <a
       href={link.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group block rounded-lg p-4 transition-all hover:-translate-y-1 hover:shadow-md"
+      className="group block rounded-lg p-4 transition-all hover:-translate-y-1 hover:shadow-md relative z-20 bg-white/80 backdrop-blur-sm"
       style={{ backgroundColor: cardBackground }}
     >
       <div className="flex items-center space-x-3">

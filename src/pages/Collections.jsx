@@ -40,8 +40,11 @@ const Collections = () => {
         />
       </div>
 
+      {/* Background overlay for small screens */}
+      <div className="md:hidden fixed inset-0 bg-white/30 backdrop-blur-[2px] z-10" />
+
       {/* Main Content - with higher z-index */}
-      <main className="relative z-10 max-w-7xl mx-auto px-6 py-8">
+      <main className="relative z-20 max-w-7xl mx-auto px-6 py-8">
         {/* Category Filters */}
         <div className="flex items-center space-x-4 mb-8 overflow-x-auto pb-4">
           <button
