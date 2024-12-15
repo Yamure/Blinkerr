@@ -8,7 +8,7 @@ const Collections = () => {
   const [activeCategory, setActiveCategory] = useState("all");
 
   return (
-    <div className="min-h-screen grainy bg-[#FAFAF9] relative">
+    <div className="min-h-screen grainy bg-gradient-to-br from-[#FAFAF9] to-[#F5F5F4] relative">
       <Navigation currentPage="collections" />
 
       {/* Decorative SVGs - moved to lower z-index */}
@@ -46,30 +46,35 @@ const Collections = () => {
       {/* Main Content - with higher z-index */}
       <main className="relative z-20 max-w-7xl mx-auto px-6 py-8">
         {/* Category Filters */}
-        <div className="flex items-center space-x-4 mb-8 overflow-x-auto pb-4">
-          <button
-            onClick={() => setActiveCategory("all")}
-            className={`text-sm whitespace-nowrap transition-colors ${
-              activeCategory === "all"
-                ? "text-zinc-900 font-medium"
-                : "text-zinc-500 hover:text-zinc-900"
-            }`}
-          >
-            All
-          </button>
-          {Object.keys(collections).map((category) => (
+        <div className="flex items-center space-x-4 mb-8 overflow-x-auto pb-4 scrollbar-hide">
+          <div className="flex gap-2 p-1 bg-zinc-100/50 backdrop-blur-sm rounded-lg">
             <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
-              className={`text-sm capitalize whitespace-nowrap transition-colors ${
-                activeCategory === category
-                  ? "text-zinc-900 font-medium"
+              onClick={() => setActiveCategory("all")}
+              className={`px-3 py-1.5 text-sm whitespace-nowrap transition-colors rounded-md ${
+                activeCategory === "all"
+                  ? "bg-white shadow-sm text-zinc-900 font-medium"
                   : "text-zinc-500 hover:text-zinc-900"
               }`}
             >
-              {category}
+              All
             </button>
-          ))}
+            {Object.keys(collections).map((category) => (
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={`px-3 py-1.5 text-sm capitalize whitespace-nowrap transition-colors rounded-md flex items-center gap-2 ${
+                  activeCategory === category
+                    ? "bg-white shadow-sm text-zinc-900 font-medium"
+                    : "text-zinc-500 hover:text-zinc-900"
+                }`}
+              >
+                {category}
+                <span className="text-xs bg-zinc-100 px-1.5 py-0.5 rounded-full">
+                  {collections[category].length}
+                </span>
+              </button>
+            ))}
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
