@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const LinkCard = ({ link }) => {
   return (
@@ -16,12 +16,8 @@ const LinkCard = ({ link }) => {
           {link.title.charAt(0)}
         </div>
         <div>
-          <h2 className="text-sm font-medium text-zinc-900">
-            {link.title}
-          </h2>
-          <p className="text-xs text-zinc-500">
-            {link.category}
-          </p>
+          <h2 className="text-sm font-medium text-zinc-900">{link.title}</h2>
+          <p className="text-xs text-zinc-500">{link.category}</p>
         </div>
       </div>
     </a>
