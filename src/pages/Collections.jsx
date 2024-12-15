@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import LinkCard from "../components/LinkCard";
 import { collections } from "../data/collections";
 import { Experiments, LookingAhead } from "../assets";
@@ -8,33 +9,41 @@ const Collections = () => {
 
   return (
     <div className="min-h-screen bg-zinc-50 relative">
-      {/* Navigation */}
+      {/* Header */}
       <nav className="sticky top-0 bg-white/80 backdrop-blur-sm border-b border-zinc-200 z-50">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex space-x-6 overflow-x-auto py-4">
-            <button
-              onClick={() => setActiveCategory("all")}
-              className={`text-sm transition-colors ${
-                activeCategory === "all"
-                  ? "text-zinc-900 font-medium"
-                  : "text-zinc-500 hover:text-zinc-900"
-              }`}
+          <div className="flex items-center justify-between py-4">
+            <Link
+              to="/"
+              className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"
             >
-              All
-            </button>
-            {Object.keys(collections).map((category) => (
+              ← Home
+            </Link>
+            <div className="flex items-center space-x-6">
               <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`text-sm capitalize transition-colors ${
-                  activeCategory === category
+                onClick={() => setActiveCategory("all")}
+                className={`text-sm transition-colors ${
+                  activeCategory === "all"
                     ? "text-zinc-900 font-medium"
                     : "text-zinc-500 hover:text-zinc-900"
                 }`}
               >
-                {category}
+                All
               </button>
-            ))}
+              {Object.keys(collections).map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setActiveCategory(category)}
+                  className={`text-sm capitalize transition-colors ${
+                    activeCategory === category
+                      ? "text-zinc-900 font-medium"
+                      : "text-zinc-500 hover:text-zinc-900"
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </nav>

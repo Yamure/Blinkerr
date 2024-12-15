@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import LinkCard from "../components/LinkCard";
-import { Astro, ChaoticGood, Coffee } from "../assets";
+import { ChaoticGood, Coffee } from "../assets";
 
 const Home = () => {
   return (
@@ -8,24 +8,30 @@ const Home = () => {
       {/* Header */}
       <nav className="sticky top-0 bg-white/80 backdrop-blur-sm border-b border-zinc-200 z-50">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex space-x-6 overflow-x-auto py-4">
+          <div className="flex items-center justify-between py-4">
             <h1 className="text-sm font-medium text-zinc-900">Links</h1>
+            <div className="flex items-center space-x-6">
+              <Link
+                to="/collections"
+                className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"
+              >
+                Collections
+              </Link>
+              <Link
+                to="/about"
+                className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"
+              >
+                About
+              </Link>
+            </div>
           </div>
         </div>
       </nav>
 
       <main className="max-w-7xl mx-auto px-6 py-8">
         {/* Yamu's Favs Section */}
-        <section className="mb-12">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-sm font-medium text-zinc-900">Yamu's Favs</h2>
-            <Link
-              to="/collections"
-              className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"
-            >
-              View all →
-            </Link>
-          </div>
+        <section>
+          <h2 className="text-sm font-medium text-zinc-900 mb-6">Yamu's Favs</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {yamusFavs.map((item) => (
               <LinkCard key={item.id} link={item} />
