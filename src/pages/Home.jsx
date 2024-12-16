@@ -12,7 +12,7 @@ const Home = () => {
     console.log("favorites:", favorites); // Debug log
 
     return (
-        <div className="min-h-screen grainy bg-[#FAFAF9] relative">
+        <div className="min-h-screen grainy relative">
             <Navigation currentPage="home" />
 
             {/* Decorative SVGs */}
@@ -28,32 +28,9 @@ const Home = () => {
             />
 
             <main className="max-w-7xl mx-auto px-6 py-8">
-                {/* Yamu's Favs Section */}
-                <section className="mb-12">
-                    <h2 className="text-sm font-medium text-zinc-900 mb-6">
-                        Yamu&apos;s Favs
-                    </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                        {yamusFavs.map((item) => (
-                            <LinkCard key={item.id} link={item} />
-                        ))}
-                    </div>
-                </section>
-                {/* Guy's Favs Section */}
-                <section className="mb-12">
-                    <h2 className="text-sm font-medium text-zinc-900 mb-6">
-                        Guy&apos;s Favs
-                    </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                        {guysFavs.map((item) => (
-                            <LinkCard key={item.id} link={item} />
-                        ))}
-                    </div>
-                </section>
-
                 {/* User's Favorites Section */}
                 {favorites.length > 0 && (
-                    <section>
+                    <section className="mb-12">
                         <div className="flex items-center space-x-2 mb-6">
                             <h2 className="text-sm font-medium text-zinc-900">
                                 Your Favorites
@@ -69,6 +46,30 @@ const Home = () => {
                         </div>
                     </section>
                 )}
+
+                {/* Yamu's Favs Section */}
+                <section className="mb-12">
+                    <h2 className="text-sm font-medium text-zinc-900 mb-6">
+                        Yamu&apos;s Favs
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        {yamusFavs.map((item) => (
+                            <LinkCard key={item.id} link={item} />
+                        ))}
+                    </div>
+                </section>
+
+                {/* Guy's Favs Section */}
+                <section className="mb-12">
+                    <h2 className="text-sm font-medium text-zinc-900 mb-6">
+                        Guy&apos;s Favs
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        {guysFavs.map((item) => (
+                            <LinkCard key={item.id} link={item} />
+                        ))}
+                    </div>
+                </section>
             </main>
 
             {/* Corner and Middle Illustrations */}
@@ -177,7 +178,8 @@ const guysFavs = [
         url: "https://tailwindcss.com/docs/",
         category: "Documentation",
         color: "#24292F",
-        description: "A all-you-can-eat buffet of Tailwind CSS styling guidelines.",
+        description:
+            "A all-you-can-eat buffet of Tailwind CSS styling guidelines.",
         dateAdded: "2024-01-16",
         useCase:
             "Every tailwind beginner needs to have this in their resource list because of it's extensive documentation on how to use Tailwind effectively.",
