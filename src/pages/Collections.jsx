@@ -101,7 +101,7 @@ const Collections = () => {
         </div>
 
         {/* Results */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredLinks.map((item) => (
             <LinkCard key={item.id} link={item} />
           ))}
