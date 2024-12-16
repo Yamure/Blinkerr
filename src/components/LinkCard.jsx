@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
-import { useFavorites } from "@/context/FavoritesContext";
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleFavorite, selectIsFavorite } from '@/store/favoritesSlice';
 
 const LinkCard = ({ link, loading = false }) => {
-  const { toggleFavorite, isFavorite } = useFavorites();
-  const isStarred = isFavorite(link.id);
+  const dispatch = useDispatch();
+  const isStarred = useSelector(state => selectIsFavorite(state, link.id));
 
   if (loading) {
     return (
@@ -33,7 +34,7 @@ const LinkCard = ({ link, loading = false }) => {
         onClick={(e) => {
           e.preventDefault();
           e.stopPropagation();
-          toggleFavorite(link);
+          dispatch(toggleFavorite(link));
         }}
         className="absolute top-4 right-4 p-1.5 rounded-full hover:bg-zinc-100 transition-colors"
       >
@@ -53,10 +54,10 @@ const LinkCard = ({ link, loading = false }) => {
       </button>
       <div className="flex items-center space-x-3 mb-4">
         <div
-          className="flex h-12 w-12 items-center justify-center rounded-md text-white text-sm font-medium shadow-sm"
+          className="flex h-12 w-12 items-center justify-center rounded-md text-white text-sm font-medium shadow-sm shrink-0"
           style={{ backgroundColor: link.color }}
         >
-          {link.title.charAt(0)}
+          <span className="block">{link.title.charAt(0)}</span>
         </div>
         <div>
           <h2 className="text-sm font-medium text-zinc-900 group-hover:text-zinc-700 transition-colors">
