@@ -1,9 +1,6 @@
 import PropTypes from "prop-types";
 
 const LinkCard = ({ link, loading = false }) => {
-  const backgroundColor = `${link.color}15`; // This is for the icon
-  const cardBackground = `${link.color}20`; // Color background for larger screens
-
   if (loading) {
     return (
       <div className="rounded-lg p-4 bg-white/80 backdrop-blur-sm animate-pulse">
@@ -25,7 +22,7 @@ const LinkCard = ({ link, loading = false }) => {
       rel="noopener noreferrer"
       title={`Visit ${link.title}`}
       className="group block rounded-lg p-4 transition-all hover:-translate-y-1 focus-visible:-translate-y-1 hover:shadow-md focus-visible:shadow-md relative z-20 bg-white/80 backdrop-blur-sm outline-none ring-zinc-400 focus-visible:ring-2"
-      style={{ backgroundColor: cardBackground }}
+      style={{ backgroundColor: `${link.color}20` }}
     >
       <div className="flex items-center space-x-3">
         <div
@@ -51,6 +48,11 @@ LinkCard.propTypes = {
     category: PropTypes.string.isRequired,
     color: PropTypes.string.isRequired,
   }).isRequired,
+  loading: PropTypes.bool
+};
+
+LinkCard.defaultProps = {
+  loading: false
 };
 
 export default LinkCard;

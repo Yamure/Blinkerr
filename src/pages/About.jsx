@@ -1,5 +1,11 @@
 import Navigation from "@components/Navigation";
-import { Pondering, Reflecting, MeelaPantalones, Pacheco, PolkaPup } from "@assets";
+import {
+  Pondering,
+  Reflecting,
+  MeelaPantalones,
+  Pacheco,
+  PolkaPup,
+} from "@assets";
 
 const About = () => {
   return (
@@ -48,12 +54,12 @@ const About = () => {
             </div>
             <div className="space-y-2 text-xs">
               <p className="font-mono text-zinc-600">
-                <span className="text-blue-500">❯</span> A minimal collection of tools and resources,
-                curated for scientific developers.
+                <span className="text-blue-500">❯</span> A minimal collection of
+                tools and resources, curated for scientific developers.
               </p>
               <p className="font-mono text-zinc-600">
-                <span className="text-blue-500">❯</span> Built with modern web technologies.
-                Designed with simplicity in mind.
+                <span className="text-blue-500">❯</span> Built with modern web
+                technologies. Designed with simplicity in mind.
               </p>
             </div>
           </section>
@@ -62,23 +68,31 @@ const About = () => {
           <section className="bg-white/80 backdrop-blur-sm rounded-lg p-5 border border-zinc-200/50">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-1.5 h-1.5 bg-green-500 rounded-full" />
-              <h2 className="text-xs font-medium text-zinc-900">stack.config</h2>
+              <h2 className="text-xs font-medium text-zinc-900">
+                stack.config
+              </h2>
             </div>
             <div className="grid grid-cols-2 gap-3">
               <div className="space-y-2">
                 <div className="flex items-center space-x-2 text-xs">
                   <span className="text-zinc-400 font-mono">$</span>
-                  <span className="text-zinc-600 font-mono">react: ^18.2.0</span>
+                  <span className="text-zinc-600 font-mono">
+                    react: ^18.2.0
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2 text-xs">
                   <span className="text-zinc-400 font-mono">$</span>
-                  <span className="text-zinc-600 font-mono">tailwind: ^3.4.16</span>
+                  <span className="text-zinc-600 font-mono">
+                    tailwind: ^3.4.16
+                  </span>
                 </div>
               </div>
               <div className="space-y-2">
                 <div className="flex items-center space-x-2 text-xs">
                   <span className="text-zinc-400 font-mono">$</span>
-                  <span className="text-zinc-600 font-mono">router: ^6.28.0</span>
+                  <span className="text-zinc-600 font-mono">
+                    router: ^6.28.0
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2 text-xs">
                   <span className="text-zinc-400 font-mono">$</span>
@@ -99,7 +113,8 @@ const About = () => {
                 <span className="text-purple-500">~</span> name: Yamu
               </p>
               <p className="font-mono text-xs text-zinc-600">
-                <span className="text-purple-500">~</span> role: Scientific Developer
+                <span className="text-purple-500">~</span> role: Scientific
+                Developer
               </p>
               <div className="flex items-center space-x-3 mt-3 pt-3 border-t border-zinc-200/50">
                 <a

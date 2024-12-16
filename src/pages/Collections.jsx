@@ -1,15 +1,33 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import LinkCard from "@components/LinkCard";
 import Navigation from "@components/Navigation";
+import SearchBar from "@components/SearchBar";
 import { collections } from "@data/collections";
 import { Experiments, LookingAhead, Rogue, NewBeginnings, Whoa } from "@assets";
+import ScrollToTop from "@components/ScrollToTop";
 
 const Collections = () => {
   const [activeCategory, setActiveCategory] = useState("all");
+  const [searchQuery, setSearchQuery] = useState("");
+
+  // Filter links based on search query and active category
+  const filteredLinks = useMemo(() => {
+    const allLinks = Object.entries(collections).flatMap(([category, items]) =>
+      activeCategory === "all" || activeCategory === category ? items : []
+    );
+
+    if (!searchQuery) return allLinks;
+
+    return allLinks.filter((link) =>
+      link.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      link.category.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }, [activeCategory, searchQuery]);
 
   return (
     <div className="min-h-screen grainy bg-gradient-to-br from-[#FAFAF9] to-[#F5F5F4] relative">
       <Navigation currentPage="collections" />
+      <ScrollToTop />
 
       {/* Decorative SVGs - moved to lower z-index */}
       <div className="fixed inset-0 pointer-events-none z-0">
@@ -45,43 +63,54 @@ const Collections = () => {
 
       {/* Main Content - with higher z-index */}
       <main className="relative z-20 max-w-7xl mx-auto px-6 py-8">
-        {/* Category Filters */}
-        <div className="flex items-center space-x-4 mb-8 overflow-x-auto pb-4 scrollbar-hide">
-          <div className="flex gap-2 p-1 bg-zinc-100/50 backdrop-blur-sm rounded-lg">
-            <button
-              onClick={() => setActiveCategory("all")}
-              className={`px-3 py-1.5 text-sm whitespace-nowrap transition-colors rounded-md ${
-                activeCategory === "all"
-                  ? "bg-white shadow-sm text-zinc-900 font-medium"
-                  : "text-zinc-500 hover:text-zinc-900"
-              }`}
-            >
-              All
-            </button>
-            {Object.keys(collections).map((category) => (
+        {/* Search and Filters */}
+        <div className="space-y-6 mb-8">
+          <SearchBar onSearch={setSearchQuery} />
+
+          {/* Category Filters */}
+          <div className="flex items-center space-x-4 overflow-x-auto pb-4 scrollbar-hide">
+            <div className="flex gap-2 p-1 bg-zinc-100/50 backdrop-blur-sm rounded-lg">
               <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`px-3 py-1.5 text-sm capitalize whitespace-nowrap transition-colors rounded-md flex items-center gap-2 ${
-                  activeCategory === category
+                onClick={() => setActiveCategory("all")}
+                className={`px-3 py-1.5 text-sm whitespace-nowrap transition-colors rounded-md ${
+                  activeCategory === "all"
                     ? "bg-white shadow-sm text-zinc-900 font-medium"
                     : "text-zinc-500 hover:text-zinc-900"
                 }`}
               >
-                {category}
-                <span className="text-xs bg-zinc-100 px-1.5 py-0.5 rounded-full">
-                  {collections[category].length}
-                </span>
+                All
               </button>
-            ))}
+              {Object.keys(collections).map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setActiveCategory(category)}
+                  className={`px-3 py-1.5 text-sm capitalize whitespace-nowrap transition-colors rounded-md flex items-center gap-2 ${
+                    activeCategory === category
+                      ? "bg-white shadow-sm text-zinc-900 font-medium"
+                      : "text-zinc-500 hover:text-zinc-900"
+                  }`}
+                >
+                  {category}
+                  <span className="text-xs bg-zinc-100 px-1.5 py-0.5 rounded-full">
+                    {collections[category].length}
+                  </span>
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
+        {/* Results */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {Object.entries(collections).map(([category, items]) =>
-            activeCategory === "all" || activeCategory === category
-              ? items.map((item) => <LinkCard key={item.id} link={item} />)
-              : null
+          {filteredLinks.map((item) => (
+            <LinkCard key={item.id} link={item} />
+          ))}
+          {filteredLinks.length === 0 && (
+            <div className="col-span-full text-center py-12">
+              <p className="text-sm text-zinc-500">
+                No results found for "{searchQuery}"
+              </p>
+            </div>
           )}
         </div>
       </main>
