@@ -123,8 +123,8 @@ const guysFavs = [
         id: uuidv4(),
         title: "Microsoft Designer",
         url: "https://designer.microsoft.com",
-        category: "Design",
-        color: "#FF4F64", //@todo CHANGE THIS COLOUR
+        category: "Design Tool",
+        color: "#FF4F64",
         description: "Canva premium but free.",
         dateAdded: "2024-01-16",
         useCase:
@@ -150,7 +150,7 @@ const guysFavs = [
         title: "Over API",
         url: "https://overapi.com",
         category: "Development",
-        color: "#24292F", //@todo CHANGE THIS COLOR
+        color: "#24292F",
         description: "The cheatsheet for everything.",
         dateAdded: "2024-01-16",
         useCase:
@@ -163,13 +163,26 @@ const guysFavs = [
         title: "Google Suite",
         url: "https://workspace.google.com/",
         category: "Productivity",
-        color: "#5E6AD2", //@todo CHANGE THIS COLOR
+        color: "#5E6AD2",
         description: "An essential suite of tools for remote productivity.",
         dateAdded: "2024-01-16",
         useCase:
             "Combining the G-Suite with Google's online storage is a game-changer for remote work.",
         comments:
             "It is superior to Microsoft's suite for cloud-based productivity and streamlined collaboration.",
+    },
+    {
+        id: uuidv4(),
+        title: "Tailwind CSS Docs",
+        url: "https://tailwindcss.com/docs/",
+        category: "Documentation",
+        color: "#24292F",
+        description: "A all-you-can-eat buffet of Tailwind CSS styling guidelines.",
+        dateAdded: "2024-01-16",
+        useCase:
+            "Every tailwind beginner needs to have this in their resource list because of it's extensive documentation on how to use Tailwind effectively.",
+        comments:
+            "I sometimes use this as inspiration. I  use the docs to remind myself that I can have a rounded corner on the card component I'm creating.",
     },
 ];
 
