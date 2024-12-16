@@ -1,4 +1,5 @@
-import { useState, useMemo } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { selectUI, setActiveCategory } from "@/store/uiSlice";
 import LinkCard from "@components/LinkCard";
 import Navigation from "@components/Navigation";
 import SearchBar from "@components/SearchBar";
@@ -6,23 +7,31 @@ import { collections } from "@data/collections";
 import { Experiments, LookingAhead, Rogue, NewBeginnings, Whoa } from "@assets";
 import ScrollToTop from "@components/ScrollToTop";
 
+// Category colors mapping
+const categoryColors = {
+  all: "#18181B", // Zinc-900 for default
+  essentials: "#F46B6C",
+  development: "#4ECDC5",
+  design: "#F7AA80",
+  productivity: "#F9E780",
+  resources: "#292F37",
+};
+
 const Collections = () => {
-  const [activeCategory, setActiveCategory] = useState("all");
-  const [searchQuery, setSearchQuery] = useState("");
+  const dispatch = useDispatch();
+  const { searchQuery, activeCategory } = useSelector(selectUI);
 
   // Filter links based on search query and active category
-  const filteredLinks = useMemo(() => {
-    const allLinks = Object.entries(collections).flatMap(([category, items]) =>
+  const filteredLinks = Object.entries(collections)
+    .flatMap(([category, items]) =>
       activeCategory === "all" || activeCategory === category ? items : []
+    )
+    .filter(
+      (link) =>
+        !searchQuery ||
+        link.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        link.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
-
-    if (!searchQuery) return allLinks;
-
-    return allLinks.filter((link) =>
-      link.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      link.category.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-  }, [activeCategory, searchQuery]);
 
   return (
     <div className="min-h-screen grainy bg-gradient-to-br from-[#FAFAF9] to-[#F5F5F4] relative">
@@ -61,37 +70,48 @@ const Collections = () => {
       {/* Background overlay for small screens */}
       <div className="md:hidden fixed inset-0 bg-white/30 backdrop-blur-[2px] z-10" />
 
-      {/* Main Content - with higher z-index */}
       <main className="relative z-20 max-w-7xl mx-auto px-6 py-8">
-        {/* Search and Filters */}
         <div className="space-y-6 mb-8">
-          <SearchBar onSearch={setSearchQuery} />
+          <SearchBar />
 
           {/* Category Filters */}
           <div className="flex items-center space-x-4 overflow-x-auto pb-4 scrollbar-hide">
             <div className="flex gap-2 p-1 bg-zinc-100/50 backdrop-blur-sm rounded-lg">
               <button
-                onClick={() => setActiveCategory("all")}
-                className={`px-3 py-1.5 text-sm whitespace-nowrap transition-colors rounded-md ${
+                onClick={() => dispatch(setActiveCategory("all"))}
+                className={`px-3 py-1.5 text-sm whitespace-nowrap transition-all rounded-md ${
                   activeCategory === "all"
-                    ? "bg-white shadow-sm text-zinc-900 font-medium"
+                    ? "bg-white shadow-sm font-medium"
                     : "text-zinc-500 hover:text-zinc-900"
                 }`}
+                style={{
+                  color: activeCategory === "all" ? categoryColors.all : undefined,
+                }}
               >
                 All
               </button>
               {Object.keys(collections).map((category) => (
                 <button
                   key={category}
-                  onClick={() => setActiveCategory(category)}
-                  className={`px-3 py-1.5 text-sm capitalize whitespace-nowrap transition-colors rounded-md flex items-center gap-2 ${
+                  onClick={() => dispatch(setActiveCategory(category))}
+                  className={`px-3 py-1.5 text-sm capitalize whitespace-nowrap transition-all rounded-md flex items-center gap-2 ${
                     activeCategory === category
-                      ? "bg-white shadow-sm text-zinc-900 font-medium"
+                      ? "bg-white shadow-sm font-medium"
                       : "text-zinc-500 hover:text-zinc-900"
                   }`}
+                  style={{
+                    color: activeCategory === category ? categoryColors[category] : undefined,
+                  }}
                 >
                   {category}
-                  <span className="text-xs bg-zinc-100 px-1.5 py-0.5 rounded-full">
+                  <span
+                    className="text-xs px-1.5 py-0.5 rounded-full"
+                    style={{
+                      backgroundColor: activeCategory === category
+                        ? `${categoryColors[category]}15`
+                        : 'rgb(244 244 245)' // zinc-100
+                    }}
+                  >
                     {collections[category].length}
                   </span>
                 </button>
