@@ -27,7 +27,7 @@ const Home = () => {
                 className="fixed top-40 left-8 w-16 h-16 opacity-30 pointer-events-none"
             />
 
-            <main className="max-w-7xl mx-auto px-6 py-8">
+            <main className="max-w-7xl mx-auto px-6 py-8 z-10">
                 {/* User's Favorites Section */}
                 {favorites.length > 0 && (
                     <section className="mb-12">
@@ -46,6 +46,23 @@ const Home = () => {
                         </div>
                     </section>
                 )}
+
+                {/* Corner and Middle Illustrations */}
+                <img
+                    src={Coffee}
+                    alt="Coffee illustration"
+                    className="fixed bottom-8 right-8 w-24 h-24 opacity-50 pointer-events-none transform scale-x-[-1]"
+                />
+                <img
+                    src={ChaoticGood}
+                    alt="Chaotic Good illustration"
+                    className="fixed bottom-8 left-8 w-24 h-24 opacity-50 pointer-events-none"
+                />
+                <img
+                    src={MechanicalLove}
+                    alt="Mechanical Love illustration"
+                    className="fixed top-1/2 right-12 w-20 h-20 opacity-30 pointer-events-none"
+                />
 
                 {/* Yamu's Favs Section */}
                 <section className="mb-12">
@@ -71,23 +88,6 @@ const Home = () => {
                     </div>
                 </section>
             </main>
-
-            {/* Corner and Middle Illustrations */}
-            <img
-                src={Coffee}
-                alt="Coffee illustration"
-                className="fixed bottom-8 right-8 w-24 h-24 opacity-50 pointer-events-none transform scale-x-[-1]"
-            />
-            <img
-                src={ChaoticGood}
-                alt="Chaotic Good illustration"
-                className="fixed bottom-8 left-8 w-24 h-24 opacity-50 pointer-events-none "
-            />
-            <img
-                src={MechanicalLove}
-                alt="Mechanical Love illustration"
-                className="fixed top-1/2 right-12 w-20 h-20 opacity-30 pointer-events-none "
-            />
         </div>
     );
 };

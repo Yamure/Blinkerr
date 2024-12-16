@@ -127,14 +127,6 @@ const LinkCard = ({ link, loading = false }) => {
                                     </button>
                                 </div>
                             </div>
-                            <div className="flex flex-wrap items-center gap-2 mt-1">
-                                {/* <span className="text-[11px] text-zinc-500 font-mono bg-zinc-100/80 px-2 py-0.5 rounded-full">
-                                    {link.category}
-                                </span> */}
-                                {/* <span className="text-[11px] text-zinc-500 font-mono truncate">
-                  {new URL(link.url).hostname.replace("www.", "")}
-                </span> */}
-                            </div>
                         </div>
                     </div>
                     <p className="text-[11px] text-zinc-600 font-mono leading-relaxed line-clamp-2 mb-4">
