@@ -79,7 +79,7 @@ const LinkCard = ({ link, loading = false }) => {
               onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                dispatch(toggleFavorite(link.id));
+                dispatch(toggleFavorite(link));
               }}
               className="p-1.5 rounded-full hover:bg-zinc-100 transition-colors"
             >
