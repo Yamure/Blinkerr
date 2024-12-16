@@ -1,6 +1,10 @@
 import PropTypes from "prop-types";
+import { useFavorites } from "@/context/FavoritesContext";
 
 const LinkCard = ({ link, loading = false }) => {
+  const { toggleFavorite, isFavorite } = useFavorites();
+  const isStarred = isFavorite(link.id);
+
   if (loading) {
     return (
       <div className="rounded-lg p-6 bg-white/80 backdrop-blur-sm animate-pulse">
@@ -25,6 +29,28 @@ const LinkCard = ({ link, loading = false }) => {
       className="group block rounded-lg p-6 transition-all hover:-translate-y-1 focus-visible:-translate-y-1 hover:shadow-md focus-visible:shadow-md relative z-20 bg-white/80 backdrop-blur-sm outline-none ring-zinc-400 focus-visible:ring-2"
       style={{ backgroundColor: `${link.color}20` }}
     >
+      <button
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          toggleFavorite(link);
+        }}
+        className="absolute top-4 right-4 p-1.5 rounded-full hover:bg-zinc-100 transition-colors"
+      >
+        <svg
+          className={`w-4 h-4 ${
+            isStarred ? 'text-yellow-400 fill-current' : 'text-zinc-400'
+          }`}
+          viewBox="0 0 20 20"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={1.5}
+        >
+          <path
+            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+          />
+        </svg>
+      </button>
       <div className="flex items-center space-x-3 mb-4">
         <div
           className="flex h-12 w-12 items-center justify-center rounded-md text-white text-sm font-medium shadow-sm"

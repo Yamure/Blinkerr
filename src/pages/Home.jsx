@@ -1,8 +1,11 @@
 import LinkCard from "@components/LinkCard";
 import Navigation from "@components/Navigation";
+import { useFavorites } from "@/context/FavoritesContext";
 import { Coffee, ChaoticGood, Pilot, Plants, MechanicalLove } from "@assets";
 
 const Home = () => {
+  const { favorites } = useFavorites();
+
   return (
     <div className="min-h-screen grainy bg-[#FAFAF9] relative">
       <Navigation currentPage="home" />
@@ -21,16 +24,33 @@ const Home = () => {
 
       <main className="max-w-7xl mx-auto px-6 py-8">
         {/* Yamu's Favs Section */}
-        <section>
+        <section className="mb-12">
           <h2 className="text-sm font-medium text-zinc-900 mb-6">
             Yamu's Favs
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {yamusFavs.map((item) => (
               <LinkCard key={item.id} link={item} />
             ))}
           </div>
         </section>
+
+        {/* User's Favorites Section */}
+        {favorites.length > 0 && (
+          <section>
+            <div className="flex items-center space-x-2 mb-6">
+              <h2 className="text-sm font-medium text-zinc-900">Your Favorites</h2>
+              <span className="text-xs bg-zinc-100 px-1.5 py-0.5 rounded-full text-zinc-500">
+                {favorites.length}
+              </span>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {favorites.map((item) => (
+                <LinkCard key={item.id} link={item} />
+              ))}
+            </div>
+          </section>
+        )}
       </main>
 
       {/* Corner and Middle Illustrations */}
