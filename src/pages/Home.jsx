@@ -19,12 +19,12 @@ const Home = () => {
             <img
                 src={Pilot}
                 alt="Pilot illustration"
-                className="absolute top-24 right-12 w-20 h-20 opacity-30 pointer-events-none"
+                className="fixed top-24 right-12 w-20 h-20 opacity-30 pointer-events-none"
             />
             <img
                 src={Plants}
                 alt="Plants illustration"
-                className="absolute top-40 left-8 w-16 h-16 opacity-30 pointer-events-none"
+                className="fixed top-40 left-8 w-16 h-16 opacity-30 pointer-events-none"
             />
 
             <main className="max-w-7xl mx-auto px-6 py-8">
