@@ -19,12 +19,12 @@ const Home = () => {
             <img
                 src={Pilot}
                 alt="Pilot illustration"
-                className="fixed top-24 right-12 w-20 h-20 opacity-30 pointer-events-none transform scale-x-[-1]"
+                className="fixed top-1/6 right-8 w-20 h-20 opacity-30 pointer-events-none transform scale-x-[-1]"
             />
             <img
                 src={Plants}
                 alt="Plants illustration"
-                className="fixed top-40 left-8 w-16 h-16 opacity-30 pointer-events-none"
+                className="fixed top-1/4 left-8 w-16 h-16 opacity-30 pointer-events-none"
             />
 
             <main className="max-w-7xl mx-auto px-6 py-8 z-10">
@@ -51,17 +51,17 @@ const Home = () => {
                 <img
                     src={Coffee}
                     alt="Coffee illustration"
-                    className="fixed bottom-8 right-8 w-24 h-24 opacity-50 pointer-events-none transform scale-x-[-1]"
+                    className="fixed bottom-1/6 right-8 w-24 h-24 opacity-50 pointer-events-none transform scale-x-[-1]"
                 />
                 <img
                     src={ChaoticGood}
                     alt="Chaotic Good illustration"
-                    className="fixed bottom-8 left-8 w-24 h-24 opacity-50 pointer-events-none"
+                    className="fixed bottom-1/6 left-8 w-24 h-24 opacity-50 pointer-events-none"
                 />
                 <img
                     src={MechanicalLove}
                     alt="Mechanical Love illustration"
-                    className="fixed top-1/2 right-12 w-20 h-20 opacity-30 pointer-events-none"
+                    className="fixed top-1/3 right-12 w-20 h-20 opacity-30 pointer-events-none"
                 />
 
                 {/* Yamu's Favs Section */}
