@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
 export const collections = {
   essentials: [
@@ -10,6 +10,11 @@ export const collections = {
       color: "#F46B6C",
       description:
         "All-in-one workspace for notes, docs, and project management. Great for building personal wikis and knowledge bases.",
+      dateAdded: "2024-01-15",
+      useCase:
+        "Perfect for creating documentation, managing projects, and organizing personal knowledge. The blocks system makes it incredibly flexible.",
+      comments:
+        "I use this daily for project documentation and personal notes. The web clipper is especially useful for saving research materials.",
     },
     {
       id: uuidv4(),
@@ -19,6 +24,11 @@ export const collections = {
       color: "#F46B6C",
       description:
         "A powerful knowledge base on your local computer. Great for building personal wikis and knowledge bases.",
+      dateAdded: "2024-01-15",
+      useCase:
+        "Perfect for creating documentation, managing projects, and organizing personal knowledge. The blocks system makes it incredibly flexible.",
+      comments:
+        "I use this daily for project documentation and personal notes. The web clipper is especially useful for saving research materials.",
     },
     {
       id: uuidv4(),
@@ -28,6 +38,11 @@ export const collections = {
       color: "#F46B6C",
       description:
         "A note-taking app that helps you remember everything. Great for building personal wikis and knowledge bases.",
+      dateAdded: "2024-01-15",
+      useCase:
+        "Perfect for creating documentation, managing projects, and organizing personal knowledge. The blocks system makes it incredibly flexible.",
+      comments:
+        "I use this daily for project documentation and personal notes. The web clipper is especially useful for saving research materials.",
     },
   ],
   development: [
@@ -39,6 +54,11 @@ export const collections = {
       color: "#4ECDC5",
       description:
         "A web-based Git repository hosting service. Great for managing code repositories.",
+      dateAdded: "2024-01-15",
+      useCase:
+        "Essential for code collaboration, version control, and open source contributions. The CI/CD integration makes deployment seamless.",
+      comments:
+        "The GitHub Copilot integration has been a game changer for productivity. Issues and Projects features are great for task management.",
     },
     {
       id: uuidv4(),
@@ -48,6 +68,11 @@ export const collections = {
       color: "#4ECDC5",
       description:
         "A source code editor made by Microsoft for Windows, Linux, and macOS. Great for coding and debugging.",
+      dateAdded: "2024-01-15",
+      useCase:
+        "Perfect for web development with great extension support and Git integration. The integrated terminal and debugger make it a powerful all-in-one development environment.",
+      comments:
+        "My go-to editor for web development. The Vim extension makes it even better for keyboard-driven development.",
     },
     {
       id: uuidv4(),
@@ -57,6 +82,11 @@ export const collections = {
       color: "#4ECDC5",
       description:
         "An online IDE for rapid development. Great for coding and debugging.",
+      dateAdded: "2024-01-15",
+      useCase:
+        "Perfect for web development with great extension support and Git integration. The integrated terminal and debugger make it a powerful all-in-one development environment.",
+      comments:
+        "I use this daily for web development. The integrated terminal and debugger make it a powerful all-in-one development environment.",
     },
   ],
   design: [
@@ -68,6 +98,11 @@ export const collections = {
       color: "#F7AA80",
       description:
         "A vector graphics editor and prototyping tool. Great for designing user interfaces and prototypes.",
+      dateAdded: "2024-01-15",
+      useCase:
+        "Essential for UI/UX design, prototyping, and collaboration. Real-time collaboration features make it perfect for team projects.",
+      comments:
+        "The auto-layout and components system has revolutionized my design workflow. The plugins ecosystem is incredibly powerful.",
     },
     {
       id: uuidv4(),
@@ -77,6 +112,11 @@ export const collections = {
       color: "#F7AA80",
       description:
         "A community for sharing design work. Great for finding design inspiration.",
+      dateAdded: "2024-01-15",
+      useCase:
+        "Perfect for finding design inspiration and staying up-to-date with current design trends. Great for discovering new designers.",
+      comments:
+        "I check it daily for inspiration. The color palettes and animations are particularly inspiring for my projects.",
     },
     {
       id: uuidv4(),
@@ -86,6 +126,11 @@ export const collections = {
       color: "#F7AA80",
       description:
         "A community for sharing design work. Great for finding design inspiration.",
+      dateAdded: "2024-01-15",
+      useCase:
+        "Excellent for deep-diving into comprehensive design case studies and finding detailed project presentations.",
+      comments:
+        "The case studies here are more detailed than Dribbble. Great for understanding design thinking and process.",
     },
   ],
   productivity: [
@@ -97,6 +142,11 @@ export const collections = {
       color: "#F9E780",
       description:
         "A productivity tool that helps you get things done. Great for managing tasks and projects.",
+      dateAdded: "2024-01-15",
+      useCase:
+        "Streamlines daily workflows with quick commands, snippets, and window management. Extensions make it highly customizable.",
+      comments:
+        "The AI commands and clipboard history features are game-changers. Much faster than Spotlight.",
     },
     {
       id: uuidv4(),
@@ -105,7 +155,12 @@ export const collections = {
       category: "Project Management",
       color: "#F9E780",
       description:
-        "A project management tool that helps you manage projects and tasks. Great for managing projects and tasks.",
+        "A project management tool that helps you manage projects and tasks.",
+      dateAdded: "2024-01-15",
+      useCase:
+        "Perfect for agile project management. The keyboard shortcuts and clean UI make task management effortless.",
+      comments:
+        "The roadmap feature and GitHub integration have greatly improved our development workflow.",
     },
     {
       id: uuidv4(),
@@ -114,7 +169,12 @@ export const collections = {
       category: "Communication",
       color: "#F9E780",
       description:
-        "A team communication tool that helps you communicate with your team. Great for communicating with your team.",
+        "A team communication tool that helps you communicate with your team.",
+      dateAdded: "2024-01-15",
+      useCase:
+        "Essential for team communication and collaboration. Integrations with other tools make it a central hub.",
+      comments:
+        "The threads feature and app integrations keep discussions organized. Huddles are great for quick team sync-ups.",
     },
   ],
   resources: [
@@ -124,8 +184,12 @@ export const collections = {
       url: "https://developer.mozilla.org",
       category: "Documentation",
       color: "#292F37",
-      description:
-        "A comprehensive resource for web developers. Great for finding information about web technologies.",
+      description: "A comprehensive resource for web developers.",
+      dateAdded: "2024-01-15",
+      useCase:
+        "The most reliable source for web development documentation. Perfect for both learning and reference.",
+      comments:
+        "The examples and browser compatibility tables are invaluable. My go-to resource for web development.",
     },
     {
       id: uuidv4(),
@@ -133,8 +197,12 @@ export const collections = {
       url: "https://devdocs.io",
       category: "Documentation",
       color: "#292F37",
-      description:
-        "A documentation browser for developers. Great for finding information about programming languages and frameworks.",
+      description: "A documentation browser for developers.",
+      dateAdded: "2024-01-15",
+      useCase:
+        "Great for offline access to documentation. The unified search across multiple technologies is incredibly useful.",
+      comments:
+        "The dark mode and keyboard shortcuts make it perfect for quick reference while coding.",
     },
     {
       id: uuidv4(),
@@ -143,7 +211,12 @@ export const collections = {
       category: "Reference",
       color: "#292F37",
       description:
-        "A reference for HTML5, CSS3, SVG, and other web technologies. Great for finding information about web technologies.",
+        "A reference for HTML5, CSS3, SVG, and other web technologies.",
+      dateAdded: "2024-01-15",
+      useCase:
+        "Essential for checking browser compatibility. Helps make informed decisions about using new features.",
+      comments:
+        "The usage statistics and known issues sections have saved me from many cross-browser headaches.",
     },
   ],
 };
