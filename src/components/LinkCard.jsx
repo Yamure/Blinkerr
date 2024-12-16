@@ -5,9 +5,23 @@ import { toggleFavorite, selectIsFavorite } from "@/store/favoritesSlice";
 import LinkDetailsModal from "./LinkDetailsModal";
 
 const LinkCard = ({ link, loading = false }) => {
+  console.log('LinkCard received props:', { link, loading });  // Debug log
+
+  if (!link && !loading) {
+    console.log('No link provided and not loading, returning null');  // Debug log
+    return null;
+  }
+
   const dispatch = useDispatch();
-  const isStarred = useSelector((state) => selectIsFavorite(state, link.id));
+  const isStarred = useSelector((state) => selectIsFavorite(state, link?.id));
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  if (!link?.title || !link?.color || !link?.category || !link?.url) {
+    console.log('Missing required link properties:', link);  // Debug log
+    return null;
+  }
+
+  const firstLetter = link?.title?.charAt(0) || '?';
 
   if (loading) {
     return (
@@ -35,7 +49,7 @@ const LinkCard = ({ link, loading = false }) => {
             className="flex h-9 w-9 items-center justify-center rounded-md text-white text-sm font-medium shadow-sm shrink-0"
             style={{ backgroundColor: link.color }}
           >
-            <span className="block">{link.title.charAt(0)}</span>
+            <span className="block">{firstLetter}</span>
           </div>
           <div>
             <h2 className="text-sm font-medium text-zinc-900 group-hover:text-zinc-700 transition-colors">

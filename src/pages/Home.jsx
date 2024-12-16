@@ -7,6 +7,8 @@ import { v4 as uuidv4 } from "uuid";
 
 const Home = () => {
   const favorites = useSelector(selectFavorites);
+  console.log('yamusFavs:', yamusFavs);  // Debug log
+  console.log('favorites:', favorites);   // Debug log
 
   return (
     <div className="min-h-screen grainy bg-[#FAFAF9] relative">
