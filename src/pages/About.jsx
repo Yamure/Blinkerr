@@ -9,7 +9,7 @@ import {
 
 const About = () => {
   return (
-    <div className="min-h-screen grainy bg-[#FAFAF9] relative">
+    <div className="min-h-screen grainy bg-custom-bg relative">
       <Navigation currentPage="about" />
 
       {/* Decorative SVGs */}
