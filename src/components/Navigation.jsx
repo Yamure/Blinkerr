@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import SearchBar from "@components/SearchBar";
 
 const Navigation = ({ currentPage }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,36 +19,39 @@ const Navigation = ({ currentPage }) => {
       <nav className="sticky top-0 bg-white/80 backdrop-blur-sm" style={{ zIndex: 50 }}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between py-4 relative">
-            <div className="flex items-center">
-              <Link
-                to="/"
-                className="text-sm font-medium hover:text-zinc-900 transition-colors no-underline"
-              >
-                <span className="text-zinc-900">ScientificDevs</span>
-                <span className="text-blue-500">/F</span>
-              </Link>
-              {currentPage !== "home" && (
-                <>
-                  <div className="h-4 mx-4 w-px bg-zinc-200" />
-                  <span className="text-zinc-500">{currentPage}</span>
-                </>
-              )}
-            </div>
+            {/* Logo */}
+            <Link
+              to="/"
+              className="text-sm font-medium hover:text-zinc-900 transition-colors no-underline shrink-0"
+            >
+              <span className="text-zinc-900">ScientificDevs</span>
+              <span className="text-blue-500">/F</span>
+            </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-6">
-              <Link
-                to="/collections"
-                className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors no-underline"
-              >
-                Collections
-              </Link>
-              <Link
-                to="/about"
-                className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors no-underline"
-              >
-                About
-              </Link>
+            {/* Desktop - Right Side Content */}
+            <div className="hidden md:flex items-center space-x-6 flex-1 justify-end">
+              {/* Search Bar - Desktop */}
+              {currentPage === "collections" && (
+                <div className="w-72">
+                  <SearchBar />
+                </div>
+              )}
+
+              {/* Navigation Links */}
+              <div className="flex items-center space-x-6 pl-6 border-l border-zinc-200">
+                <Link
+                  to="/collections"
+                  className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors no-underline whitespace-nowrap"
+                >
+                  Collections
+                </Link>
+                <Link
+                  to="/about"
+                  className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors no-underline whitespace-nowrap"
+                >
+                  About
+                </Link>
+              </div>
             </div>
 
             {/* Mobile Menu Button */}
@@ -76,6 +80,13 @@ const Navigation = ({ currentPage }) => {
               </svg>
             </button>
           </div>
+
+          {/* Search Bar - Mobile */}
+          {currentPage === "collections" && (
+            <div className="md:hidden pb-4">
+              <SearchBar />
+            </div>
+          )}
         </div>
 
         {/* Mobile Navigation Menu */}

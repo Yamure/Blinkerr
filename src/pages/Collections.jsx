@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectUI, setActiveCategory } from "@/store/uiSlice";
 import LinkCard from "@components/LinkCard";
 import Navigation from "@components/Navigation";
-import SearchBar from "@components/SearchBar";
 import { collections } from "@data/collections";
 import { Experiments, LookingAhead, Rogue, NewBeginnings, Whoa } from "@assets";
 import ScrollToTop from "@components/ScrollToTop";
@@ -72,8 +71,6 @@ const Collections = () => {
 
       <main className="relative z-20 max-w-7xl mx-auto px-6 py-8">
         <div className="space-y-6 mb-8">
-          <SearchBar />
-
           {/* Category Filters */}
           <div className="flex items-center space-x-4 overflow-x-auto pb-4 scrollbar-hide">
             <div className="flex gap-2 p-1 bg-zinc-100/50 backdrop-blur-sm rounded-lg">
