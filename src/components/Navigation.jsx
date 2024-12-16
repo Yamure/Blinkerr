@@ -24,7 +24,7 @@ const Navigation = ({ currentPage }) => {
               to="/"
               className="text-sm font-medium hover:text-zinc-900 transition-colors no-underline shrink-0"
             >
-              <span className="text-zinc-900">ScientificDevs</span>
+              <span className="text-zinc-900">ScientficDevs</span>
               <span className="text-blue-500">/F</span>
             </Link>
 
