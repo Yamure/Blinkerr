@@ -82,7 +82,7 @@ const LinkCard = ({ link, loading = false }) => {
                 />
 
                 <div className="relative z-10">
-                    <div className="flex items-start space-x-3 mb-2">
+                    <div className="flex items-center space-x-3 mb-4">
                         <div
                             className="flex h-10 w-10 items-center justify-center rounded-lg text-white text-sm font-medium shadow-sm shrink-0 transition-transform duration-300 group-hover:scale-110"
                             style={{ backgroundColor: link.color }}
@@ -134,7 +134,10 @@ const LinkCard = ({ link, loading = false }) => {
                             </div>
                         </div>
                     </div>
-                    <p className="text-[11px] w-fit px-2 mb-2 text-zinc-500 font-mono bg-zinc-100/80 rounded-full">
+                    <p
+                        className="text-[11px] w-fit px-2 mb-2 text-zinc-600 font-mono rounded-full"
+                        style={{ backgroundColor: `${link.color}20` }}
+                    >
                         {link.category}
                     </p>
                     <p className="text-[11px] text-zinc-600 font-mono leading-relaxed line-clamp-2 mb-4">
