@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleFavorite, selectIsFavorite } from "@/store/favoritesSlice";
 import LinkDetailsModal from "./LinkDetailsModal";
-import { FaExternalLinkAlt } from "react-icons/fa";
 import {
     Browsers,
     Code,
