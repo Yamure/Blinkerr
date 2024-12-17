@@ -6,7 +6,7 @@ const FavoritesBar = () => {
   if (favorites.length === 0) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-white/80 backdrop-blur-sm border-t border-zinc-200/50 z-40">
+    <div className="fixed bottom-0 left-0 right-0 bg-custom-bg/80 backdrop-blur-sm border-t border-zinc-200/50 z-40">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center space-x-4">
           <h3 className="text-xs font-medium text-zinc-900">Favorites</h3>

@@ -12,7 +12,7 @@ const Home = () => {
     console.log("favorites:", favorites); // Debug log
 
     return (
-        <div className="min-h-screen grainy relative">
+        <div className="min-h-screen grainy bg-custom-bg relative">
             <Navigation currentPage="home" />
 
             {/* Decorative SVGs */}

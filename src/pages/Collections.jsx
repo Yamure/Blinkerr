@@ -33,7 +33,7 @@ const Collections = () => {
     );
 
   return (
-    <div className="min-h-screen grainy bg-gradient-to-br from-[#FAFAF9] to-[#F5F5F4] relative">
+    <div className="min-h-screen grainy bg-custom-bg relative">
       <Navigation currentPage="collections" />
       <ScrollToTop />
 
