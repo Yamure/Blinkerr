@@ -3,8 +3,8 @@ import { selectUI, setActiveCategory } from "@/store/uiSlice";
 import LinkCard from "@components/LinkCard";
 import Navigation from "@components/Navigation";
 import { collections } from "@data/collections";
-import { Experiments, LookingAhead, Rogue, NewBeginnings, Whoa } from "@assets";
 import ScrollToTop from "@components/ScrollToTop";
+import { CollectionsIllustration, CollectionsMobileIllustration } from "@components/illustrations";
 
 // Category colors mapping
 const categoryColors = {
@@ -36,40 +36,10 @@ const Collections = () => {
     <div className="min-h-screen grainy bg-custom-bg relative">
       <Navigation currentPage="collections" />
       <ScrollToTop />
+      <CollectionsMobileIllustration />
+      <CollectionsIllustration />
 
-      {/* Decorative SVGs - moved to lower z-index */}
-      <div className="fixed inset-0 pointer-events-none z-0">
-        <img
-          src={Rogue}
-          alt="Rogue illustration"
-          className="absolute top-32 left-12 w-16 h-16 opacity-30"
-        />
-        <img
-          src={Whoa}
-          alt="Whoa illustration"
-          className="absolute top-48 right-16 w-20 h-20 opacity-30"
-        />
-        <img
-          src={Experiments}
-          alt="Experiments illustration"
-          className="absolute bottom-8 right-8 w-24 h-24 opacity-50"
-        />
-        <img
-          src={LookingAhead}
-          alt="Looking Ahead illustration"
-          className="absolute bottom-8 left-8 w-24 h-24 opacity-50"
-        />
-        <img
-          src={NewBeginnings}
-          alt="New Beginnings illustration"
-          className="absolute top-1/2 left-12 w-20 h-20 opacity-30"
-        />
-      </div>
-
-      {/* Background overlay for small screens */}
-      <div className="md:hidden fixed inset-0 bg-white/30 backdrop-blur-[2px] z-10" />
-
-      <main className="relative z-20 max-w-7xl mx-auto px-6 py-8">
+      <main className="max-w-7xl mx-auto px-6 py-8 relative z-10 h-screen overflow-y-auto md:h-auto md:overflow-visible">
         <div className="space-y-6 mb-8">
           {/* Category Filters */}
           <div className="flex items-center space-x-4 overflow-x-auto pb-4 scrollbar-hide">

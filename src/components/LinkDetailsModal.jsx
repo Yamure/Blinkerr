@@ -4,14 +4,14 @@ const LinkDetailsModal = ({ link, isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] overflow-y-auto">
+    <div className="fixed inset-0 z-[100]" style={{ position: 'fixed', height: '100vh' }}>
       <div
-        className="fixed inset-0 bg-custom-bg/20 backdrop-blur-sm"
+        className="fixed inset-0 bg-custom-bg/30 backdrop-blur-sm"
         onClick={onClose}
       />
 
-      <div className="relative min-h-screen flex items-center justify-center p-4">
-        <div className="relative bg-white rounded-lg shadow-xl max-w-2xl w-full p-6 overflow-hidden">
+      <div className="fixed inset-0 flex items-center justify-center p-4">
+        <div className="relative grainy bg-custom-bg rounded-lg shadow-xl max-w-2xl w-full p-6 max-h-[90vh] overflow-y-auto">
           {/* Header with icon */}
           <div className="flex items-center space-x-4 mb-6">
             <div
@@ -34,22 +34,26 @@ const LinkDetailsModal = ({ link, isOpen, onClose }) => {
 
             {/* Use Case */}
             {link.useCase && (
-              <div className="bg-zinc-50 rounded-lg p-4">
-                <h3 className="text-sm font-medium text-zinc-900 mb-2">Why use it?</h3>
+              <div className="bg-white/50 backdrop-blur-sm rounded-lg p-4">
+                <h3 className="text-sm font-medium text-zinc-900 mb-2">
+                  Why use it?
+                </h3>
                 <p className="text-sm text-zinc-600">{link.useCase}</p>
               </div>
             )}
 
             {/* Personal Notes */}
             {link.comments && (
-              <div className="bg-blue-50 rounded-lg p-4">
-                <h3 className="text-sm font-medium text-blue-900 mb-2">Personal Notes</h3>
-                <p className="text-sm text-blue-800">{link.comments}</p>
+              <div className="bg-white/50 backdrop-blur-sm rounded-lg p-4">
+                <h3 className="text-sm font-medium text-zinc-900 mb-2">
+                  Personal Notes
+                </h3>
+                <p className="text-sm text-zinc-600">{link.comments}</p>
               </div>
             )}
 
             {/* Details Grid */}
-            <div className="grid grid-cols-2 gap-4 py-4 border-y border-zinc-100">
+            <div className="grid grid-cols-2 gap-4 py-4 border-y border-zinc-200/50">
               <div>
                 <p className="text-xs font-medium text-zinc-500">Added On</p>
                 <p className="mt-1 text-sm text-zinc-900">
@@ -70,11 +74,21 @@ const LinkDetailsModal = ({ link, isOpen, onClose }) => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-zinc-900 rounded-lg hover:bg-zinc-800 transition-colors"
+                className="inline-flex items-center px-4 py-2 text-sm font-medium text-zinc-900 bg-white/80 hover:bg-white/90 rounded-lg transition-colors backdrop-blur-sm"
               >
                 Visit Website
-                <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                <svg
+                  className="w-4 h-4 ml-2"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
                 </svg>
               </a>
             </div>
@@ -83,10 +97,20 @@ const LinkDetailsModal = ({ link, isOpen, onClose }) => {
           {/* Close button */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 p-1.5 rounded-full hover:bg-zinc-100 text-zinc-400 hover:text-zinc-600 transition-colors"
+            className="absolute top-4 right-4 p-1.5 rounded-full hover:bg-white/20 text-zinc-600 hover:text-zinc-900 transition-colors"
           >
-            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
+            <svg
+              className="w-5 h-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </button>
         </div>
