@@ -3,8 +3,7 @@ import Navigation from "@components/Navigation";
 import { useSelector } from "react-redux";
 import { selectFavorites } from "@/store/favoritesSlice";
 import { yamusFavs, guysFavs } from "@/data/favorites";
-import DynamicIllustration from "@components/DynamicIllustration";
-import MobileIllustration from "@components/MobileIllustration";
+import { DynamicIllustration, MobileIllustration } from "@components/illustrations";
 
 const Home = () => {
   const favorites = useSelector(selectFavorites);
