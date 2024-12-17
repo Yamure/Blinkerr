@@ -6,7 +6,6 @@ export const guysFavs = [
         title: "Arc",
         url: "https://arc.net",
         category: "Browser",
-        color: "#FF4F64",
         description: "A browser built for a better internet.",
         dateAdded: "2024-01-15",
         useCase:
@@ -19,7 +18,6 @@ export const guysFavs = [
         title: "GitHub",
         url: "https://github.com",
         category: "Development",
-        color: "#24292F",
         description: "Development platform inspired by the way you work.",
         dateAdded: "2024-01-16",
         useCase:
@@ -32,7 +30,6 @@ export const guysFavs = [
         title: "VS Code",
         url: "https://vscode.dev",
         category: "Development",
-        color: "#007ACC",
         description: "Code editing. Redefined.",
         dateAdded: "2024-01-16",
         useCase:
@@ -45,7 +42,6 @@ export const guysFavs = [
         title: "Over API",
         url: "https://overapi.com",
         category: "Development",
-        color: "#24292F",
         description: "The cheatsheet for everything.",
         dateAdded: "2024-01-16",
         useCase:
@@ -58,7 +54,6 @@ export const guysFavs = [
         title: "Google Suite",
         url: "https://workspace.google.com/",
         category: "Productivity",
-        color: "#5E6AD2",
         description: "An essential suite of tools for remote productivity.",
         dateAdded: "2024-01-16",
         useCase:
@@ -71,7 +66,6 @@ export const guysFavs = [
         title: "Tailwind CSS Docs",
         url: "https://tailwindcss.com/docs/",
         category: "Documentation",
-        color: "#24292F",
         description:
             "A all-you-can-eat buffet of Tailwind CSS styling guidelines.",
         dateAdded: "2024-01-16",
@@ -88,7 +82,6 @@ export const yamusFavs = [
         title: "Raycast",
         url: "https://raycast.com",
         category: "Productivity",
-        color: "#FF6363",
         description: "Productivity tool that helps you get things done faster.",
         dateAdded: "2024-01-15",
         useCase:
@@ -101,7 +94,6 @@ export const yamusFavs = [
         title: "Arc",
         url: "https://arc.net",
         category: "Browser",
-        color: "#5A45FF",
         description: "A browser built for a better internet.",
         dateAdded: "2024-01-15",
         useCase:
@@ -114,7 +106,6 @@ export const yamusFavs = [
         title: "Figma",
         url: "https://figma.com",
         category: "Design",
-        color: "#1E1E1E",
         description: "Collaborative interface design tool.",
         dateAdded: "2024-01-15",
         useCase:
@@ -127,7 +118,6 @@ export const yamusFavs = [
         title: "GitHub",
         url: "https://github.com",
         category: "Development",
-        color: "#24292F",
         description: "Development platform inspired by the way you work.",
         dateAdded: "2024-01-15",
         useCase:
@@ -140,7 +130,6 @@ export const yamusFavs = [
         title: "VS Code",
         url: "https://vscode.dev",
         category: "Development",
-        color: "#007ACC",
         description: "Code editing. Redefined.",
         dateAdded: "2024-01-15",
         useCase:
@@ -153,7 +142,6 @@ export const yamusFavs = [
         title: "Notion",
         url: "https://notion.so",
         category: "Productivity",
-        color: "#000000",
         description: "All-in-one workspace for your notes, tasks, and docs.",
         dateAdded: "2024-01-15",
         useCase:
@@ -166,7 +154,6 @@ export const yamusFavs = [
         title: "Linear",
         url: "https://linear.app",
         category: "Project Management",
-        color: "#5E6AD2",
         description: "The issue tracking tool you'll enjoy using.",
         dateAdded: "2024-01-15",
         useCase:
@@ -178,8 +165,7 @@ export const yamusFavs = [
         id: uuidv4(),
         title: "Warp",
         url: "https://warp.dev",
-        category: "Development",
-        color: "#FF4F64",
+        category: "Terminal",
         description: "The terminal for the 21st century.",
         dateAdded: "2024-01-15",
         useCase:

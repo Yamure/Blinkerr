@@ -1,13 +1,26 @@
 import { v4 as uuidv4 } from "uuid";
 
 export const collections = {
-    essentials: [
+    Browsers: [
+        {
+            id: uuidv4(),
+            title: "Arc",
+            url: "https://arc.net",
+            category: "Browser",
+            description: "A browser built for a better internet.",
+            dateAdded: "2024-01-15",
+            useCase:
+                "Great for organizing research and managing multiple workspaces. The split view is perfect for development.",
+            comments:
+                "The spaces feature helps me separate work and personal browsing. Command bar is incredibly intuitive.",
+        },
+    ],
+    Productivity: [
         {
             id: uuidv4(),
             title: "Google Suite",
             url: "https://workspace.google.com/",
             category: "Productivity",
-            color: "#5E6AD2",
             description: "An essential suite of tools for remote productivity.",
             dateAdded: "2024-01-16",
             useCase:
@@ -19,8 +32,7 @@ export const collections = {
             id: uuidv4(),
             title: "Notion",
             url: "https://notion.so",
-            category: "Note Taking",
-            color: "#F46B6C",
+            category: "Productivity",
             description:
                 "All-in-one workspace for notes, docs, and project management. Great for building personal wikis and knowledge bases.",
             dateAdded: "2024-01-15",
@@ -29,12 +41,13 @@ export const collections = {
             comments:
                 "I use this daily for project documentation and personal notes. The web clipper is especially useful for saving research materials.",
         },
+    ],
+    "Note Taking": [
         {
             id: uuidv4(),
             title: "Obsidian",
             url: "https://obsidian.md",
             category: "Note Taking",
-            color: "#F46B6C",
             description:
                 "A powerful knowledge base on your local computer. Great for building personal wikis and knowledge bases.",
             dateAdded: "2024-01-15",
@@ -48,7 +61,6 @@ export const collections = {
             title: "Evernote",
             url: "https://evernote.com",
             category: "Note Taking",
-            color: "#F46B6C",
             description:
                 "A note-taking app that helps you remember everything. Great for building personal wikis and knowledge bases.",
             dateAdded: "2024-01-15",
@@ -58,13 +70,12 @@ export const collections = {
                 "I use this daily for project documentation and personal notes. The web clipper is especially useful for saving research materials.",
         },
     ],
-    development: [
+    Development: [
         {
             id: uuidv4(),
             title: "GitHub",
             url: "https://github.com",
-            category: "Version Control",
-            color: "#4ECDC5",
+            category: "Development",
             description:
                 "A web-based Git repository hosting service. Great for managing code repositories.",
             dateAdded: "2024-01-15",
@@ -77,8 +88,7 @@ export const collections = {
             id: uuidv4(),
             title: "VS Code",
             url: "https://code.visualstudio.com",
-            category: "Code Editor",
-            color: "#4ECDC5",
+            category: "Development",
             description:
                 "A source code editor made by Microsoft for Windows, Linux, and macOS. Great for coding and debugging.",
             dateAdded: "2024-01-15",
@@ -91,8 +101,7 @@ export const collections = {
             id: uuidv4(),
             title: "CodeSandbox",
             url: "https://codesandbox.io",
-            category: "Code Editor",
-            color: "#4ECDC5",
+            category: "Development",
             description:
                 "An online IDE for rapid development. Great for coding and debugging.",
             dateAdded: "2024-01-15",
@@ -102,13 +111,12 @@ export const collections = {
                 "I use this daily for web development. The integrated terminal and debugger make it a powerful all-in-one development environment.",
         },
     ],
-    design: [
+    Design: [
         {
             id: uuidv4(),
             title: "Figma",
             url: "https://figma.com",
-            category: "Design Tool",
-            color: "#F7AA80",
+            category: "Design",
             description:
                 "A vector graphics editor and prototyping tool. Great for designing user interfaces and prototypes.",
             dateAdded: "2024-01-15",
@@ -122,7 +130,6 @@ export const collections = {
             title: "Dribbble",
             url: "https://dribbble.com",
             category: "Inspiration",
-            color: "#F7AA80",
             description:
                 "A community for sharing design work. Great for finding design inspiration.",
             dateAdded: "2024-01-15",
@@ -136,7 +143,6 @@ export const collections = {
             title: "Behance",
             url: "https://behance.net",
             category: "Inspiration",
-            color: "#F7AA80",
             description:
                 "A community for sharing design work. Great for finding design inspiration.",
             dateAdded: "2024-01-15",
@@ -146,13 +152,12 @@ export const collections = {
                 "The case studies here are more detailed than Dribbble. Great for understanding design thinking and process.",
         },
     ],
-    productivity: [
+    Productivity: [
         {
             id: uuidv4(),
             title: "Raycast",
             url: "https://raycast.com",
-            category: "Workflow",
-            color: "#F9E780",
+            category: "Productivity",
             description:
                 "A productivity tool that helps you get things done. Great for managing tasks and projects.",
             dateAdded: "2024-01-15",
@@ -161,26 +166,12 @@ export const collections = {
             comments:
                 "The AI commands and clipboard history features are game-changers. Much faster than Spotlight.",
         },
-        {
-            id: uuidv4(),
-            title: "Linear",
-            url: "https://linear.app",
-            category: "Project Management",
-            color: "#F9E780",
-            description:
-                "A project management tool that helps you manage projects and tasks.",
-            dateAdded: "2024-01-15",
-            useCase:
-                "Perfect for agile project management. The keyboard shortcuts and clean UI make task management effortless.",
-            comments:
-                "The roadmap feature and GitHub integration have greatly improved our development workflow.",
-        },
+
         {
             id: uuidv4(),
             title: "Slack",
             url: "https://slack.com",
-            category: "Communication",
-            color: "#F9E780",
+            category: "Productivity",
             description:
                 "A team communication tool that helps you communicate with your team.",
             dateAdded: "2024-01-15",
@@ -190,13 +181,12 @@ export const collections = {
                 "The threads feature and app integrations keep discussions organized. Huddles are great for quick team sync-ups.",
         },
     ],
-    resources: [
+    Documentation: [
         {
             id: uuidv4(),
             title: "Tailwind CSS Docs",
             url: "https://tailwindcss.com/docs/",
             category: "Documentation",
-            color: "#24292F",
             description:
                 "A all-you-can-eat buffet of Tailwind CSS styling guidelines.",
             dateAdded: "2024-01-16",
@@ -209,8 +199,7 @@ export const collections = {
             id: uuidv4(),
             title: "Over API",
             url: "https://overapi.com",
-            category: "Development",
-            color: "#24292F",
+            category: "Documentation",
             description: "The cheatsheet for everything.",
             dateAdded: "2024-01-16",
             useCase:
@@ -223,7 +212,6 @@ export const collections = {
             title: "MDN",
             url: "https://developer.mozilla.org",
             category: "Documentation",
-            color: "#292F37",
             description: "A comprehensive resource for web developers.",
             dateAdded: "2024-01-15",
             useCase:
@@ -236,7 +224,6 @@ export const collections = {
             title: "DevDocs",
             url: "https://devdocs.io",
             category: "Documentation",
-            color: "#292F37",
             description: "A documentation browser for developers.",
             dateAdded: "2024-01-15",
             useCase:
@@ -244,12 +231,28 @@ export const collections = {
             comments:
                 "The dark mode and keyboard shortcuts make it perfect for quick reference while coding.",
         },
+    ],
+    "Project Management": [
+        {
+            id: uuidv4(),
+            title: "Linear",
+            url: "https://linear.app",
+            category: "Project Management",
+            description:
+                "A project management tool that helps you manage projects and tasks.",
+            dateAdded: "2024-01-15",
+            useCase:
+                "Perfect for agile project management. The keyboard shortcuts and clean UI make task management effortless.",
+            comments:
+                "The roadmap feature and GitHub integration have greatly improved our development workflow.",
+        },
+    ],
+    Resources: [
         {
             id: uuidv4(),
             title: "Can I Use",
             url: "https://caniuse.com",
-            category: "Reference",
-            color: "#292F37",
+            category: "Resources",
             description:
                 "A reference for HTML5, CSS3, SVG, and other web technologies.",
             dateAdded: "2024-01-15",

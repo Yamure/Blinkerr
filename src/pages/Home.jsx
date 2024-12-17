@@ -1,15 +1,15 @@
 import LinkCard from "@components/LinkCard";
 import Navigation from "@components/Navigation";
 import { useSelector } from "react-redux";
-import { selectFavorites } from "@/store/favoritesSlice";
-import { yamusFavs, guysFavs } from "@/data/favorites";
+import { selectFavourites } from "@/store/favouritesSlice";
+import { yamusFavs, guysFavs } from "@/data/favourites";
 import {
     DynamicIllustration,
     MobileIllustration,
 } from "@components/illustrations";
 
 const Home = () => {
-    const favorites = useSelector(selectFavorites);
+    const favourites = useSelector(selectFavourites);
 
     return (
         <div className="min-h-screen grainy bg-custom-bg relative">
@@ -20,18 +20,18 @@ const Home = () => {
             <main className="max-w-7xl mx-auto px-6 py-8 relative z-10 h-screen overflow-y-auto md:h-auto md:overflow-visible">
                 <div className="space-y-12">
                     {/* User's Favorites Section */}
-                    {favorites.length > 0 && (
+                    {favourites.length > 0 && (
                         <section>
                             <div className="flex items-center space-x-2 mb-6">
                                 <h2 className="text-sm font-medium text-zinc-900">
                                     Your Favorites
                                 </h2>
                                 <span className="text-xs bg-zinc-100 px-1.5 py-0.5 rounded-full text-zinc-500">
-                                    {favorites.length}
+                                    {favourites.length}
                                 </span>
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {favorites.map((item) => (
+                                {favourites.map((item) => (
                                     <LinkCard key={item.id} link={item} />
                                 ))}
                             </div>

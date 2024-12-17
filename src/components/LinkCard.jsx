@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleFavorite, selectIsFavorite } from "@/store/favoritesSlice";
+import { toggleFavourite, selectIsFavourite } from "@/store/favouritesSlice";
 import LinkDetailsModal from "./LinkDetailsModal";
 import {
     Browsers,
@@ -17,8 +17,12 @@ import {
     Globe,
     Info,
     Star,
+    Book,
+    Pencil,
+    Lightbulb,
 } from "@phosphor-icons/react";
 import { LiaExternalLinkAltSolid } from "react-icons/lia";
+import { GiInspiration } from "react-icons/gi";
 
 const LinkCard = ({ link, loading = false }) => {
     if (!link && !loading) {
@@ -26,14 +30,34 @@ const LinkCard = ({ link, loading = false }) => {
     }
 
     const dispatch = useDispatch();
-    const isStarred = useSelector((state) => selectIsFavorite(state, link?.id));
+    const isStarred = useSelector((state) =>
+        selectIsFavourite(state, link?.id)
+    );
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    if (!link?.title || !link?.color || !link?.category || !link?.url) {
+    if (!link?.title || !link?.category || !link?.url) {
         return null;
     }
 
     const firstLetter = link?.title?.charAt(0) || "?";
+
+    const getColourForCategory = (category) => {
+        const colours = {
+            Browser: "#8BC34A",
+            Essentials: "#F46B6C",
+            Development: "#4ECDC5",
+            Design: "#F7AA80",
+            Productivity: "#34A85A",
+            Resources: "#292F37",
+            "Project Management": "#F7B4B4",
+            Documentation: "#3498db",
+            "Note Taking": "#FFC107",
+            Terminal: "#3498db",
+            Inspiration: "#FFA07A",
+        };
+
+        return colours[category] || "FFFFFF";
+    };
 
     const getIconForCategory = (category) => {
         const icons = {
@@ -47,6 +71,9 @@ const LinkCard = ({ link, loading = false }) => {
             UI: Layout,
             Database: Database,
             Cloud: Cloud,
+            Documentation: Book,
+            "Note Taking": Pencil,
+            Inspiration: Lightbulb,
         };
 
         const Icon = icons[category] || Globe;
@@ -72,12 +99,18 @@ const LinkCard = ({ link, loading = false }) => {
         <>
             <div
                 className="min-h-42 group relative block rounded-xl p-4 sm:p-6 transition-all duration-300 hover:-translate-y-1 focus-visible:-translate-y-1 hover:shadow-lg focus-visible:shadow-lg bg-white/90 backdrop-blur-sm outline-none ring-zinc-400 focus-visible:ring-2"
-                style={{ backgroundColor: `${link.color}10` }}
+                style={{
+                    backgroundColor: `${getColourForCategory(link.category)}10`,
+                }}
             >
                 <div
                     className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     style={{
-                        background: `linear-gradient(45deg, ${link.color}05 0%, ${link.color}15 100%)`,
+                        background: `linear-gradient(45deg, ${getColourForCategory(
+                            link.category
+                        )}05 0%, ${getColourForCategory(
+                            link.category
+                        )}15 100%)`,
                     }}
                 />
 
@@ -85,7 +118,11 @@ const LinkCard = ({ link, loading = false }) => {
                     <div className="flex items-center space-x-3 mb-4">
                         <div
                             className="flex h-10 w-10 items-center justify-center rounded-lg text-white text-sm font-medium shadow-sm shrink-0 transition-transform duration-300 group-hover:scale-110"
-                            style={{ backgroundColor: link.color }}
+                            style={{
+                                backgroundColor: `${getColourForCategory(
+                                    link.category
+                                )}`,
+                            }}
                         >
                             {getIconForCategory(link.category)}
                         </div>
@@ -115,7 +152,7 @@ const LinkCard = ({ link, loading = false }) => {
                                         onClick={(e) => {
                                             e.preventDefault();
                                             e.stopPropagation();
-                                            dispatch(toggleFavorite(link));
+                                            dispatch(toggleFavourite(link));
                                         }}
                                         className="p-1.5 rounded-full hover:bg-zinc-100 transition-colors"
                                     >
@@ -135,8 +172,12 @@ const LinkCard = ({ link, loading = false }) => {
                         </div>
                     </div>
                     <p
-                        className="text-[11px] w-fit px-2 mb-2 text-zinc-600 font-mono rounded-full"
-                        style={{ backgroundColor: `${link.color}20` }}
+                        className="text-[11px] w-fit px-2 mb-2 text-white font-mono rounded-full"
+                        style={{
+                            backgroundColor: `${getColourForCategory(
+                                link.category
+                            )}`,
+                        }}
                     >
                         {link.category}
                     </p>
@@ -161,7 +202,6 @@ LinkCard.propTypes = {
         description: PropTypes.string.isRequired,
         url: PropTypes.string.isRequired,
         category: PropTypes.string.isRequired,
-        color: PropTypes.string.isRequired,
         dateAdded: PropTypes.string.isRequired,
         comments: PropTypes.string,
         useCase: PropTypes.string,
