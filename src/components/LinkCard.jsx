@@ -22,7 +22,6 @@ import {
     Lightbulb,
 } from "@phosphor-icons/react";
 import { LiaExternalLinkAltSolid } from "react-icons/lia";
-import { GiInspiration } from "react-icons/gi";
 
 const LinkCard = ({ link, loading = false }) => {
     if (!link && !loading) {
@@ -38,8 +37,6 @@ const LinkCard = ({ link, loading = false }) => {
     if (!link?.title || !link?.category || !link?.url) {
         return null;
     }
-
-    const firstLetter = link?.title?.charAt(0) || "?";
 
     const getColourForCategory = (category) => {
         const colours = {
@@ -84,13 +81,13 @@ const LinkCard = ({ link, loading = false }) => {
         return (
             <div className="rounded-xl p-4 sm:p-6 bg-custom-bg/80 backdrop-blur-sm animate-pulse">
                 <div className="flex items-start space-x-3 mb-4">
-                    <div className="h-10 w-10 rounded-lg bg-zinc-200 shrink-0" />
+                    <div className="h-10 w-10 rounded-lg bg-primary-200 shrink-0" />
                     <div className="flex-1 min-w-0">
-                        <div className="h-4 w-24 bg-zinc-200 rounded" />
-                        <div className="h-3 w-16 bg-zinc-200 rounded mt-2" />
+                        <div className="h-4 w-24 bg-primary-200 rounded" />
+                        <div className="h-3 w-16 bg-primary-200 rounded mt-2" />
                     </div>
                 </div>
-                <div className="h-16 bg-zinc-200 rounded" />
+                <div className="h-16 bg-primary-200 rounded" />
             </div>
         );
     }
@@ -98,7 +95,7 @@ const LinkCard = ({ link, loading = false }) => {
     return (
         <>
             <div
-                className="min-h-42 group relative block rounded-xl p-4 sm:p-6 transition-all duration-300 hover:-translate-y-1 focus-visible:-translate-y-1 hover:shadow-lg focus-visible:shadow-lg bg-white/90 backdrop-blur-sm outline-none ring-zinc-400 focus-visible:ring-2"
+                className="min-h-42 group relative block rounded-xl p-4 sm:p-6 transition-all duration-300 hover:-translate-y-1 focus-visible:-translate-y-1 hover:shadow-lg focus-visible:shadow-lg bg-white/90 backdrop-blur-sm outline-none ring-primary-400 focus-visible:ring-2"
                 style={{
                     backgroundColor: `${getColourForCategory(link.category)}10`,
                 }}
@@ -128,7 +125,7 @@ const LinkCard = ({ link, loading = false }) => {
                         </div>
                         <div className="flex-1 min-w-0">
                             <div className="flex items-start justify-between gap-2">
-                                <h2 className="text-[18px] font-medium text-zinc-900 group-hover:text-zinc-700 transition-colors truncate">
+                                <h2 className="text-[18px] font-heading font-medium text-text-900 group-hover:text-text-700 transition-colors truncate">
                                     {link.title}
                                 </h2>
                                 <div className="flex items-center gap-1.5 shrink-0">
@@ -136,17 +133,17 @@ const LinkCard = ({ link, loading = false }) => {
                                         href={link.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="p-1.5 rounded-full hover:bg-zinc-100 transition-colors"
+                                        className="p-1.5 rounded-full hover:bg-primary-100 transition-colors"
                                         aria-label="Visit resource"
                                     >
-                                        <LiaExternalLinkAltSolid className="w-4 h-4 text-zinc-400" />
+                                        <LiaExternalLinkAltSolid className="w-4 h-4 text-primary-400" />
                                     </a>
                                     <button
                                         onClick={() => setIsModalOpen(true)}
-                                        className="p-1.5 rounded-full hover:bg-zinc-100 transition-colors"
+                                        className="p-1.5 rounded-full hover:bg-primary-100 transition-colors"
                                         aria-label="View details"
                                     >
-                                        <Info className="w-4 h-4 text-zinc-400" />
+                                        <Info className="w-4 h-4 text-primary-400" />
                                     </button>
                                     <button
                                         onClick={(e) => {
@@ -154,7 +151,7 @@ const LinkCard = ({ link, loading = false }) => {
                                             e.stopPropagation();
                                             dispatch(toggleFavourite(link));
                                         }}
-                                        className="p-1.5 rounded-full hover:bg-zinc-100 transition-colors"
+                                        className="p-1.5 rounded-full hover:bg-primary-100 transition-colors"
                                     >
                                         <Star
                                             weight={
@@ -163,7 +160,7 @@ const LinkCard = ({ link, loading = false }) => {
                                             className={`w-4 h-4 transition-colors duration-300 ${
                                                 isStarred
                                                     ? "text-yellow-400"
-                                                    : "text-zinc-400 group-hover:text-zinc-500"
+                                                    : "text-primary-400 group-hover:text-primary-500"
                                             }`}
                                         />
                                     </button>
@@ -172,7 +169,7 @@ const LinkCard = ({ link, loading = false }) => {
                         </div>
                     </div>
                     <p
-                        className="text-[11px] w-fit px-2 mb-2 text-white font-mono rounded-full"
+                        className="text-[11px] w-fit px-2 mb-2 text-white font-heading uppercase rounded-full"
                         style={{
                             backgroundColor: `${getColourForCategory(
                                 link.category
@@ -181,7 +178,7 @@ const LinkCard = ({ link, loading = false }) => {
                     >
                         {link.category}
                     </p>
-                    <p className="text-[11px] text-zinc-600 font-mono leading-relaxed line-clamp-2 mb-4">
+                    <p className="text-[11px] text-text-600 font-body leading-relaxed line-clamp-2 mb-4">
                         {link.description}
                     </p>
                 </div>

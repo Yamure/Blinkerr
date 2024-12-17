@@ -12,7 +12,7 @@ import {
 // Category colors mapping
 const categoryColors = {
     all: "#18181B", // Zinc-900 for default
-    Browser: "#8BC34A",
+    Browsers: "#8BC34A",
     Essentials: "#F46B6C",
     Development: "#4ECDC5",
     Design: "#F7AA80",
@@ -52,15 +52,15 @@ const Collections = () => {
                 <div className="space-y-6 mb-8">
                     {/* Category Filters */}
                     <div className="flex items-center space-x-4 overflow-x-auto pb-4 scrollbar-hide">
-                        <div className="flex gap-2 p-1 bg-zinc-100/50 backdrop-blur-sm rounded-lg">
+                        <div className="flex gap-2 p-1 bg-white/50 backdrop-blur-sm rounded-lg">
                             <button
                                 onClick={() =>
                                     dispatch(setActiveCategory("all"))
                                 }
-                                className={`px-3 py-1.5 text-sm whitespace-nowrap transition-all rounded-md ${
+                                className={`px-3 py-1.5 text-base font-heading whitespace-nowrap transition-all rounded-md ${
                                     activeCategory === "all"
                                         ? "bg-white shadow-sm font-medium"
-                                        : "text-zinc-500 hover:text-zinc-900"
+                                        : "text-text-500 hover:text-text-900"
                                 }`}
                                 style={{
                                     color:
@@ -77,10 +77,10 @@ const Collections = () => {
                                     onClick={() =>
                                         dispatch(setActiveCategory(category))
                                     }
-                                    className={`px-3 py-1.5 text-sm capitalize whitespace-nowrap transition-all rounded-md flex items-center gap-2 ${
+                                    className={`px-3 py-1.5 text-base font-heading capitalize whitespace-nowrap transition-all rounded-md flex items-center gap-2 ${
                                         activeCategory === category
                                             ? "bg-white shadow-sm font-medium"
-                                            : "text-zinc-500 hover:text-zinc-900"
+                                            : "text-text-500 hover:text-text-900"
                                     }`}
                                     style={{
                                         color:
@@ -91,7 +91,7 @@ const Collections = () => {
                                 >
                                     {category}
                                     <span
-                                        className="text-xs px-1.5 py-0.5 rounded-full"
+                                        className="text-xs font-heading px-1.5 py-0.5 rounded-full"
                                         style={{
                                             backgroundColor:
                                                 activeCategory === category
@@ -114,7 +114,7 @@ const Collections = () => {
                     ))}
                     {filteredLinks.length === 0 && (
                         <div className="col-span-full text-center py-12">
-                            <p className="text-sm text-zinc-500">
+                            <p className="text-sm font-body text-text-500">
                                 No results found for &quot;{searchQuery}&quot;
                             </p>
                         </div>

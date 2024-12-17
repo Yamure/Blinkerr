@@ -23,10 +23,10 @@ const Home = () => {
                     {favourites.length > 0 && (
                         <section>
                             <div className="flex items-center space-x-2 mb-6">
-                                <h2 className="text-sm font-medium text-zinc-900">
+                                <h2 className="text-base font-medium font-heading text-text-900">
                                     Your Favorites
                                 </h2>
-                                <span className="text-xs bg-zinc-100 px-1.5 py-0.5 rounded-full text-zinc-500">
+                                <span className="text-base font-heading bg-primary-100 px-1.5 py-0.5 rounded-full text-text-500">
                                     {favourites.length}
                                 </span>
                             </div>
@@ -40,7 +40,7 @@ const Home = () => {
 
                     {/* Yamu's Favs Section */}
                     <section>
-                        <h2 className="text-sm font-medium text-zinc-900 mb-6">
+                        <h2 className="mb-6 text-base font-medium font-heading text-text-900">
                             Yamu&apos;s Favs
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -52,7 +52,7 @@ const Home = () => {
 
                     {/* Guy's Favs Section */}
                     <section>
-                        <h2 className="text-sm font-medium text-zinc-900 mb-6">
+                        <h2 className="mb-6 text-base font-medium font-heading text-text-900">
                             Guy&apos;s Favs
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

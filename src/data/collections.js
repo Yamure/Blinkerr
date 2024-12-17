@@ -18,6 +18,33 @@ export const collections = {
     Productivity: [
         {
             id: uuidv4(),
+            title: "Raycast",
+            url: "https://raycast.com",
+            category: "Productivity",
+            description:
+                "A productivity tool that helps you get things done. Great for managing tasks and projects.",
+            dateAdded: "2024-01-15",
+            useCase:
+                "Streamlines daily workflows with quick commands, snippets, and window management. Extensions make it highly customizable.",
+            comments:
+                "The AI commands and clipboard history features are game-changers. Much faster than Spotlight.",
+        },
+
+        {
+            id: uuidv4(),
+            title: "Slack",
+            url: "https://slack.com",
+            category: "Productivity",
+            description:
+                "A team communication tool that helps you communicate with your team.",
+            dateAdded: "2024-01-15",
+            useCase:
+                "Essential for team communication and collaboration. Integrations with other tools make it a central hub.",
+            comments:
+                "The threads feature and app integrations keep discussions organized. Huddles are great for quick team sync-ups.",
+        },
+        {
+            id: uuidv4(),
             title: "Google Suite",
             url: "https://workspace.google.com/",
             category: "Productivity",
@@ -150,35 +177,6 @@ export const collections = {
                 "Excellent for deep-diving into comprehensive design case studies and finding detailed project presentations.",
             comments:
                 "The case studies here are more detailed than Dribbble. Great for understanding design thinking and process.",
-        },
-    ],
-    Productivity: [
-        {
-            id: uuidv4(),
-            title: "Raycast",
-            url: "https://raycast.com",
-            category: "Productivity",
-            description:
-                "A productivity tool that helps you get things done. Great for managing tasks and projects.",
-            dateAdded: "2024-01-15",
-            useCase:
-                "Streamlines daily workflows with quick commands, snippets, and window management. Extensions make it highly customizable.",
-            comments:
-                "The AI commands and clipboard history features are game-changers. Much faster than Spotlight.",
-        },
-
-        {
-            id: uuidv4(),
-            title: "Slack",
-            url: "https://slack.com",
-            category: "Productivity",
-            description:
-                "A team communication tool that helps you communicate with your team.",
-            dateAdded: "2024-01-15",
-            useCase:
-                "Essential for team communication and collaboration. Integrations with other tools make it a central hub.",
-            comments:
-                "The threads feature and app integrations keep discussions organized. Huddles are great for quick team sync-ups.",
         },
     ],
     Documentation: [

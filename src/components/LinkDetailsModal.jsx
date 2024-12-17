@@ -1,5 +1,24 @@
 import PropTypes from "prop-types";
 
+import {
+    Browsers,
+    Code,
+    PaintBrush,
+    Lightning,
+    Robot,
+    Rocket,
+    Terminal,
+    Layout,
+    Database,
+    Cloud,
+    Globe,
+    Info,
+    Star,
+    Book,
+    Pencil,
+    Lightbulb,
+} from "@phosphor-icons/react";
+
 const LinkDetailsModal = ({ link, isOpen, onClose }) => {
     if (!isOpen) return null;
 
@@ -18,6 +37,27 @@ const LinkDetailsModal = ({ link, isOpen, onClose }) => {
         };
 
         return colours[category] || "FFFFFF";
+    };
+
+    const getIconForCategory = (category) => {
+        const icons = {
+            Browser: Browsers,
+            Development: Code,
+            Design: PaintBrush,
+            Productivity: Lightning,
+            AI: Robot,
+            "Project Management": Rocket,
+            Terminal: Terminal,
+            UI: Layout,
+            Database: Database,
+            Cloud: Cloud,
+            Documentation: Book,
+            "Note Taking": Pencil,
+            Inspiration: Lightbulb,
+        };
+
+        const Icon = icons[category] || Globe;
+        return <Icon weight="bold" className="w-5 h-5" />;
     };
 
     return (
@@ -43,14 +83,14 @@ const LinkDetailsModal = ({ link, isOpen, onClose }) => {
                             }}
                         >
                             <span className="block">
-                                {link.title.charAt(0)}
+                                {getIconForCategory(link.category)}
                             </span>
                         </div>
                         <div>
-                            <h2 className="text-xl font-semibold text-zinc-900">
+                            <h2 className="text-xl font-heading text-text-900">
                                 {link.title}
                             </h2>
-                            <p className="text-sm text-zinc-500">
+                            <p className="text-sm font-heading uppercase text-text-500">
                                 {link.category}
                             </p>
                         </div>
@@ -58,17 +98,17 @@ const LinkDetailsModal = ({ link, isOpen, onClose }) => {
 
                     {/* Description */}
                     <div className="space-y-6">
-                        <div className="prose prose-zinc prose-sm">
+                        <div className="font-body text-sm">
                             <p>{link.description}</p>
                         </div>
 
                         {/* Use Case */}
                         {link.useCase && (
                             <div className="bg-white/50 backdrop-blur-sm rounded-lg p-4">
-                                <h3 className="text-sm font-medium text-zinc-900 mb-2">
+                                <h3 className="text-base font-medium font-heading text-text-900 mb-2">
                                     Why use it?
                                 </h3>
-                                <p className="text-sm text-zinc-600">
+                                <p className="text-sm font-body text-text-600">
                                     {link.useCase}
                                 </p>
                             </div>
@@ -77,10 +117,10 @@ const LinkDetailsModal = ({ link, isOpen, onClose }) => {
                         {/* Personal Notes */}
                         {link.comments && (
                             <div className="bg-white/50 backdrop-blur-sm rounded-lg p-4">
-                                <h3 className="text-sm font-medium text-zinc-900 mb-2">
+                                <h3 className="text-base font-medium font-heading text-text-900 mb-2">
                                     Personal Notes
                                 </h3>
-                                <p className="text-sm text-zinc-600">
+                                <p className="text-sm font-body text-text-600">
                                     {link.comments}
                                 </p>
                             </div>
@@ -89,20 +129,20 @@ const LinkDetailsModal = ({ link, isOpen, onClose }) => {
                         {/* Details Grid */}
                         <div className="grid grid-cols-2 gap-4 py-4 border-y border-zinc-200/50">
                             <div>
-                                <p className="text-xs font-medium text-zinc-500">
+                                <p className="text-xs font-medium font-heading text-text-500">
                                     Added On
                                 </p>
-                                <p className="mt-1 text-sm text-zinc-900">
+                                <p className="mt-1 text-sm font-body text-text-900">
                                     {new Date(
                                         link.dateAdded
                                     ).toLocaleDateString()}
                                 </p>
                             </div>
                             <div>
-                                <p className="text-xs font-medium text-zinc-500">
+                                <p className="text-xs font-medium font-heading text-text-500">
                                     Website
                                 </p>
-                                <p className="mt-1 text-sm text-zinc-900">
+                                <p className="mt-1 text-sm font-body text-text-900">
                                     {new URL(link.url).hostname.replace(
                                         "www.",
                                         ""
@@ -117,7 +157,7 @@ const LinkDetailsModal = ({ link, isOpen, onClose }) => {
                                 href={link.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center px-4 py-2 text-sm font-medium text-zinc-900 bg-white/80 hover:bg-white/90 rounded-lg transition-colors backdrop-blur-sm"
+                                className="inline-flex items-center px-4 py-2 text-sm font-medium font-heading uppercase text-text-900 bg-white/80 hover:bg-white/90 rounded-lg transition-colors backdrop-blur-sm"
                             >
                                 Visit Website
                                 <svg
