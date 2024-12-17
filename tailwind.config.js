@@ -89,7 +89,7 @@ export default {
                 bold: "700",
             },
             backgroundColor: {
-                "custom-bg": "#EFEAE3",
+                "custom-bg": "#f7f7f8",
             },
         },
     },
