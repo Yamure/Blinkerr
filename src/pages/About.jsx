@@ -124,36 +124,70 @@ const About = () => {
                                 user.config
                             </h2>
                         </div>
-                        <div className="space-y-2">
-                            <p className="font-body text-sm text-text-600">
-                                <span className="font-body text-purple-500">
-                                    ~
-                                </span>{" "}
-                                name: Yamu
-                            </p>
-                            <p className="font-body text-sm text-text-600">
-                                <span className="font-body text-purple-500">
-                                    ~
-                                </span>{" "}
-                                role: Scientific Developer
-                            </p>
-                            <div className="flex items-center space-x-3 mt-3 pt-3 border-t border-zinc-200/50">
-                                <a
-                                    href="https://github.com/Yamure"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-xs text-text-500 hover:text-zinc-900 transition-colors font-heading uppercase"
-                                >
-                                    github
-                                </a>
-                                <a
-                                    href="https://www.linkedin.com/in/yamukelwa-msimango-/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-xs text-text-500 hover:text-text-900 transition-colors font-heading uppercase"
-                                >
-                                    linkden
-                                </a>
+                        <div className="flex flex-col lg:flex-row lg:justify-start lg:items-center lg:gap-16">
+                            <div className="space-y-2">
+                                <p className="font-body text-sm text-text-600">
+                                    <span className="font-body text-purple-500">
+                                        ~
+                                    </span>{" "}
+                                    name: Guy
+                                </p>
+                                <p className="font-body text-sm text-text-600">
+                                    <span className="font-body text-purple-500">
+                                        ~
+                                    </span>{" "}
+                                    role: A Cooler Developer
+                                </p>
+                                <div className="flex items-center space-x-3 mt-3 pt-3 border-t border-zinc-200/50">
+                                    <a
+                                        href="https://github.com/GuyMcKechnie"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-xs text-text-500 hover:text-zinc-900 transition-colors font-heading uppercase"
+                                    >
+                                        github
+                                    </a>
+                                    <a
+                                        href="https://www.linkedin.com/in/guymckechnie/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-xs text-text-500 hover:text-text-900 transition-colors font-heading uppercase"
+                                    >
+                                        linkedin
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="space-y-2">
+                                <p className="font-body text-sm text-text-600">
+                                    <span className="font-body text-purple-500">
+                                        ~
+                                    </span>{" "}
+                                    name: Yamu
+                                </p>
+                                <p className="font-body text-sm text-text-600">
+                                    <span className="font-body text-purple-500">
+                                        ~
+                                    </span>{" "}
+                                    role: Scientific Developer
+                                </p>
+                                <div className="flex items-center space-x-3 mt-3 pt-3 border-t border-zinc-200/50">
+                                    <a
+                                        href="https://github.com/Yamure"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-xs text-text-500 hover:text-zinc-900 transition-colors font-heading uppercase"
+                                    >
+                                        github
+                                    </a>
+                                    <a
+                                        href="https://www.linkedin.com/in/yamukelwa-msimango-/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-xs text-text-500 hover:text-text-900 transition-colors font-heading uppercase"
+                                    >
+                                        linkedin
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </section>

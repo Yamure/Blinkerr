@@ -97,7 +97,7 @@ const LinkCard = ({ link, loading = false }) => {
             <div
                 className="min-h-42 group relative block rounded-xl p-4 sm:p-6 transition-all duration-300 hover:-translate-y-1 focus-visible:-translate-y-1 hover:shadow-lg focus-visible:shadow-lg bg-white/90 backdrop-blur-sm outline-none ring-primary-400 focus-visible:ring-2"
                 style={{
-                    backgroundColor: `${getColourForCategory(link.category)}10`,
+                    backgroundColor: `${getColourForCategory(link.category)}20`,
                 }}
             >
                 <div

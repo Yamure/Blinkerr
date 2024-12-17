@@ -91,7 +91,7 @@ const Collections = () => {
                                 >
                                     {category}
                                     <span
-                                        className="text-xs font-heading px-1.5 py-0.5 rounded-full"
+                                        className="text-sm font-heading px-1.5 py-0.5 rounded-full"
                                         style={{
                                             backgroundColor:
                                                 activeCategory === category
