@@ -3,23 +3,145 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-custom-bg;
-  }
+    body {
+        @apply bg-custom-bg;
+    }
+    :root {
+        --text-50: #f1f1f4;
+        --text-100: #e4e3e8;
+        --text-200: #c9c6d2;
+        --text-300: #adaabb;
+        --text-400: #928ea4;
+        --text-500: #77718e;
+        --text-600: #5f5b71;
+        --text-700: #474455;
+        --text-800: #302d39;
+        --text-900: #18171c;
+        --text-950: #0c0b0e;
+
+        --background-50: #f1f1f3;
+        --background-100: #e4e4e7;
+        --background-200: #c8c8d0;
+        --background-300: #adadb8;
+        --background-400: #9292a0;
+        --background-500: #777788;
+        --background-600: #5f5f6d;
+        --background-700: #474752;
+        --background-800: #2f2f37;
+        --background-900: #18181b;
+        --background-950: #0c0c0e;
+
+        --primary-50: #f1f1f4;
+        --primary-100: #e4e3e8;
+        --primary-200: #c8c7d1;
+        --primary-300: #adabba;
+        --primary-400: #928fa3;
+        --primary-500: #76738c;
+        --primary-600: #5f5c70;
+        --primary-700: #474554;
+        --primary-800: #2f2e38;
+        --primary-900: #18171c;
+        --primary-950: #0c0b0e;
+
+        --secondary-50: #ece8fc;
+        --secondary-100: #dad2f9;
+        --secondary-200: #b4a4f4;
+        --secondary-300: #8f77ee;
+        --secondary-400: #6949e9;
+        --secondary-500: #441ce3;
+        --secondary-600: #3616b6;
+        --secondary-700: #291188;
+        --secondary-800: #1b0b5b;
+        --secondary-900: #0e062d;
+        --secondary-950: #070317;
+
+        --accent-50: #ebe7fe;
+        --accent-100: #d7cefd;
+        --accent-200: #b09dfb;
+        --accent-300: #886cf9;
+        --accent-400: #613bf7;
+        --accent-500: #390af5;
+        --accent-600: #2e08c4;
+        --accent-700: #220693;
+        --accent-800: #170462;
+        --accent-900: #0b0231;
+        --accent-950: #060118;
+    }
+    .dark {
+        --text-50: #0c0b0e;
+        --text-100: #18171c;
+        --text-200: #302d39;
+        --text-300: #474455;
+        --text-400: #5f5b71;
+        --text-500: #77718e;
+        --text-600: #928ea4;
+        --text-700: #adaabb;
+        --text-800: #c9c6d2;
+        --text-900: #e4e3e8;
+        --text-950: #f1f1f4;
+
+        --background-50: #0c0c0e;
+        --background-100: #17171c;
+        --background-200: #2f2f37;
+        --background-300: #464653;
+        --background-400: #5e5e6e;
+        --background-500: #75758a;
+        --background-600: #9191a1;
+        --background-700: #acacb9;
+        --background-800: #c8c8d0;
+        --background-900: #e3e3e8;
+        --background-950: #f1f1f3;
+
+        --primary-50: #0c0b0e;
+        --primary-100: #18171c;
+        --primary-200: #2f2e38;
+        --primary-300: #474554;
+        --primary-400: #5f5c70;
+        --primary-500: #76738c;
+        --primary-600: #928fa3;
+        --primary-700: #adabba;
+        --primary-800: #c8c7d1;
+        --primary-900: #e4e3e8;
+        --primary-950: #f1f1f4;
+
+        --secondary-50: #070317;
+        --secondary-100: #0e062d;
+        --secondary-200: #1b0b5b;
+        --secondary-300: #291188;
+        --secondary-400: #3616b6;
+        --secondary-500: #441ce3;
+        --secondary-600: #6949e9;
+        --secondary-700: #8f77ee;
+        --secondary-800: #b4a4f4;
+        --secondary-900: #dad2f9;
+        --secondary-950: #ece8fc;
+
+        --accent-50: #060118;
+        --accent-100: #0b0231;
+        --accent-200: #170462;
+        --accent-300: #220693;
+        --accent-400: #2e08c4;
+        --accent-500: #390af5;
+        --accent-600: #613bf7;
+        --accent-700: #886cf9;
+        --accent-800: #b09dfb;
+        --accent-900: #d7cefd;
+        --accent-950: #ebe7fe;
+    }
 }
 
 @media (max-width: 640px) {
-  .grid {
-    grid-template-columns: repeat(1, 1fr) !important;
-  }
+    .grid {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
 
-  .fixed {
-    position: absolute;
-  }
+    .fixed {
+        position: absolute;
+    }
 }
 
 @media (min-width: 641px) and (max-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
+    .grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
 }
