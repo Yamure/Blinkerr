@@ -4,7 +4,10 @@ const LinkDetailsModal = ({ link, isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[100]" style={{ position: 'fixed', height: '100vh' }}>
+    <div
+      className="fixed inset-0 z-[100]"
+      style={{ position: "fixed", height: "100vh" }}
+    >
       <div
         className="fixed inset-0 bg-custom-bg/30 backdrop-blur-sm"
         onClick={onClose}
@@ -21,7 +24,9 @@ const LinkDetailsModal = ({ link, isOpen, onClose }) => {
               <span className="block">{link.title.charAt(0)}</span>
             </div>
             <div>
-              <h2 className="text-xl font-semibold text-zinc-900">{link.title}</h2>
+              <h2 className="text-xl font-semibold text-zinc-900">
+                {link.title}
+              </h2>
               <p className="text-sm text-zinc-500">{link.category}</p>
             </div>
           </div>

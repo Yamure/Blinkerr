@@ -11,12 +11,17 @@ const Navigation = ({ currentPage }) => {
       {/* White overlay when menu is open */}
       <div
         className={`fixed inset-0 bg-custom-bg/50 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
-          isOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
+          isOpen
+            ? "opacity-100 visible"
+            : "opacity-0 invisible pointer-events-none"
         }`}
         style={{ zIndex: 45 }}
       />
 
-      <nav className="sticky top-0 bg-custom-bg/80 backdrop-blur-sm" style={{ zIndex: 50 }}>
+      <nav
+        className="sticky top-0 bg-custom-bg/80 backdrop-blur-sm"
+        style={{ zIndex: 50 }}
+      >
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between py-4 relative">
             {/* Logo */}
@@ -63,7 +68,7 @@ const Navigation = ({ currentPage }) => {
             >
               <svg
                 className={`w-5 h-5 transition-colors duration-300 ${
-                  isOpen ? 'text-zinc-900' : 'text-zinc-500'
+                  isOpen ? "text-zinc-900" : "text-zinc-500"
                 }`}
                 fill="none"
                 strokeLinecap="round"
@@ -92,7 +97,9 @@ const Navigation = ({ currentPage }) => {
         {/* Mobile Navigation Menu */}
         <div
           className={`fixed inset-0 bg-custom-bg transition-all duration-300 md:hidden ${
-            isOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
+            isOpen
+              ? "opacity-100 visible"
+              : "opacity-0 invisible pointer-events-none"
           }`}
           style={{ zIndex: 55 }}
         >

@@ -4,7 +4,10 @@ import LinkCard from "@components/LinkCard";
 import Navigation from "@components/Navigation";
 import { collections } from "@data/collections";
 import ScrollToTop from "@components/ScrollToTop";
-import { CollectionsIllustration, CollectionsMobileIllustration } from "@components/illustrations";
+import {
+  CollectionsIllustration,
+  CollectionsMobileIllustration,
+} from "@components/illustrations";
 
 // Category colors mapping
 const categoryColors = {
@@ -52,7 +55,8 @@ const Collections = () => {
                     : "text-zinc-500 hover:text-zinc-900"
                 }`}
                 style={{
-                  color: activeCategory === "all" ? categoryColors.all : undefined,
+                  color:
+                    activeCategory === "all" ? categoryColors.all : undefined,
                 }}
               >
                 All
@@ -67,16 +71,20 @@ const Collections = () => {
                       : "text-zinc-500 hover:text-zinc-900"
                   }`}
                   style={{
-                    color: activeCategory === category ? categoryColors[category] : undefined,
+                    color:
+                      activeCategory === category
+                        ? categoryColors[category]
+                        : undefined,
                   }}
                 >
                   {category}
                   <span
                     className="text-xs px-1.5 py-0.5 rounded-full"
                     style={{
-                      backgroundColor: activeCategory === category
-                        ? `${categoryColors[category]}15`
-                        : 'rgb(244 244 245)' // zinc-100
+                      backgroundColor:
+                        activeCategory === category
+                          ? `${categoryColors[category]}15`
+                          : "rgb(244 244 245)", // zinc-100
                     }}
                   >
                     {collections[category].length}

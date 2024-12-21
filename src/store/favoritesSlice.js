@@ -5,7 +5,7 @@ const loadFavorites = () => {
     const saved = localStorage.getItem("favorites");
     const favorites = saved ? JSON.parse(saved) : [];
     // Filter out any string IDs and ensure we only have valid link objects
-    return favorites.filter(fav => typeof fav === 'object' && fav !== null);
+    return favorites.filter((fav) => typeof fav === "object" && fav !== null);
   } catch (error) {
     console.error("Error loading favorites:", error);
     return [];
@@ -25,7 +25,7 @@ const favoritesSlice = createSlice({
       } else {
         // Add to favorites if doesn't exist
         // Ensure we're only adding objects, not IDs
-        if (typeof action.payload === 'object' && action.payload !== null) {
+        if (typeof action.payload === "object" && action.payload !== null) {
           state.push(action.payload);
         }
       }
@@ -40,7 +40,7 @@ export const { toggleFavorite } = favoritesSlice.actions;
 // Selectors
 export const selectFavorites = (state) =>
   // Ensure we only return valid link objects
-  state.favorites.filter(fav => typeof fav === 'object' && fav !== null);
+  state.favorites.filter((fav) => typeof fav === "object" && fav !== null);
 
 export const selectIsFavorite = (state, id) =>
   state.favorites.some((fav) => fav?.id === id);
