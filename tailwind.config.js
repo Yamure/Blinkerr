@@ -88,9 +88,6 @@ export default {
         normal: "400",
         bold: "700",
       },
-      backgroundColor: {
-        "custom-bg": "#00011D",
-      },
     },
   },
   plugins: [],

@@ -12,7 +12,7 @@ const Home = () => {
   const favourites = useSelector(selectFavourites);
 
   return (
-    <div className="min-h-screen grainy bg-custom-bg relative">
+    <div className="min-h-screen  relative">
       <Navigation currentPage="home" />
       <MobileIllustration />
       <DynamicIllustration />
