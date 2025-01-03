@@ -167,6 +167,32 @@ export const collections = {
         },
         {
             id: uuidv4(),
+            title: "Unblast",
+            url: "https://unblast.com/",
+            category: "Inspiration",
+            description:
+                "A hub of free resources for designers, illustrators, and developers.",
+            dateAdded: "2024-01-03",
+            useCase:
+                "A collection of free design resources, including mockups, icons, and illustrations, for personal and commercial use.",
+            comments:
+                "Unlike other popular resources for images, Unblast offers a wide variety of design assets totally for free.",
+        },
+        {
+            id: uuidv4(),
+            title: "Graphic Burger",
+            url: "https://graphicburger.com/others/",
+            category: "Design",
+            description:
+                "A lesser-known resource for free design assets, including mockups and UI kits which are hard to come by.",
+            dateAdded: "2024-01-03",
+            useCase:
+                "The resources are unique, making them stand out from other design asset websites.",
+            comments:
+                "It can be used as a source of inspiration for design projects.",
+        },
+        {
+            id: uuidv4(),
             title: "Behance",
             url: "https://behance.net",
             category: "Inspiration",
@@ -177,6 +203,32 @@ export const collections = {
                 "Excellent for deep-diving into comprehensive design case studies and finding detailed project presentations.",
             comments:
                 "The case studies here are more detailed than Dribbble. Great for understanding design thinking and process.",
+        },
+        {
+            id: uuidv4(),
+            title: "iconmonstr",
+            url: "https://iconmonstr.com/",
+            category: "Design",
+            description:
+                "A ton of free to use icons that do not require attribution.",
+            dateAdded: "2025-01-03",
+            useCase:
+                "A resource for free icons that can be used in personal and commercial projects without attribution.",
+            comments:
+                "The icons are well-designed and come in a variety of styles. Great for adding visual elements to projects.",
+        },
+        {
+            id: uuidv4(),
+            title: "Undraw Illustrations",
+            url: "https://undraw.co/illustrations",
+            category: "Design",
+            description:
+                "A collection of free illustrations for websites and applications.",
+            dateAdded: "2025-01-03",
+            useCase:
+                "A resource that provides free illustrations for web and app design projects.",
+            comments:
+                "The illustrations are high-quality and cover a wide range of themes. They can also be customized to fit the project's color scheme.",
         },
     ],
     Documentation: [

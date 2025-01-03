@@ -79,15 +79,15 @@ const LinkCard = ({ link, loading = false }) => {
 
     if (loading) {
         return (
-            <div className="rounded-xl p-4 sm:p-6 bg-custom-bg/80 backdrop-blur-sm animate-pulse">
-                <div className="flex items-start space-x-3 mb-4">
-                    <div className="h-10 w-10 rounded-lg bg-primary-200 shrink-0" />
+            <div className="p-4 rounded-xl sm:p-6 bg-custom-bg/80 backdrop-blur-sm animate-pulse">
+                <div className="flex items-start mb-4 space-x-3">
+                    <div className="w-10 h-10 rounded-lg bg-primary-200 shrink-0" />
                     <div className="flex-1 min-w-0">
-                        <div className="h-4 w-24 bg-primary-200 rounded" />
-                        <div className="h-3 w-16 bg-primary-200 rounded mt-2" />
+                        <div className="w-24 h-4 rounded bg-primary-200" />
+                        <div className="w-16 h-3 mt-2 rounded bg-primary-200" />
                     </div>
                 </div>
-                <div className="h-16 bg-primary-200 rounded" />
+                <div className="h-16 rounded bg-primary-200" />
             </div>
         );
     }
@@ -95,13 +95,13 @@ const LinkCard = ({ link, loading = false }) => {
     return (
         <>
             <div
-                className="min-h-42 group relative block rounded-xl p-4 sm:p-6 transition-all duration-300 hover:-translate-y-1 focus-visible:-translate-y-1 hover:shadow-lg focus-visible:shadow-lg bg-white/90 backdrop-blur-sm outline-none ring-primary-400 focus-visible:ring-2"
+                className="relative block p-4 transition-all duration-300 outline-none min-h-42 group rounded-xl sm:p-6 hover:-translate-y-1 focus-visible:-translate-y-1 hover:shadow-lg focus-visible:shadow-lg bg-white/90 backdrop-blur-sm ring-primary-400 focus-visible:ring-2"
                 style={{
                     backgroundColor: `${getColourForCategory(link.category)}20`,
                 }}
             >
                 <div
-                    className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    className="absolute inset-0 transition-opacity duration-300 opacity-0 rounded-xl group-hover:opacity-100"
                     style={{
                         background: `linear-gradient(45deg, ${getColourForCategory(
                             link.category
@@ -112,9 +112,9 @@ const LinkCard = ({ link, loading = false }) => {
                 />
 
                 <div className="relative z-10">
-                    <div className="flex items-center space-x-3 mb-4">
+                    <div className="flex items-center mb-4 space-x-3">
                         <div
-                            className="flex h-10 w-10 items-center justify-center rounded-lg text-white text-sm font-medium shadow-sm shrink-0 transition-transform duration-300 group-hover:scale-110"
+                            className="flex items-center justify-center w-10 h-10 text-sm font-medium text-white transition-transform duration-300 rounded-lg shadow-sm shrink-0 group-hover:scale-110"
                             style={{
                                 backgroundColor: `${getColourForCategory(
                                     link.category
