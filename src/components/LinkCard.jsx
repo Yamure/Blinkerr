@@ -24,15 +24,15 @@ import {
 import { LiaExternalLinkAltSolid } from "react-icons/lia";
 
 const LinkCard = ({ link, loading = false }) => {
-    if (!link && !loading) {
-        return null;
-    }
-
     const dispatch = useDispatch();
     const isStarred = useSelector((state) =>
         selectIsFavourite(state, link?.id)
     );
     const [isModalOpen, setIsModalOpen] = useState(false);
+
+    if (!link && !loading) {
+        return null;
+    }
 
     if (!link?.title || !link?.category || !link?.url) {
         return null;
