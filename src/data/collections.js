@@ -300,6 +300,30 @@ export const collections = {
     Resources: [
         {
             id: uuidv4(),
+            title: "Astronomy",
+            url: "https://astro-nomy.vercel.app/landing",
+            category: "Resources",
+            description:
+                "A resource for inspiration using ShadCN and React components.",
+            dateAdded: "2024-01-15",
+            useCase: "A great resource for inspiration.",
+            comments: "",
+        },
+        {
+            id: uuidv4(),
+            title: "React Bits",
+            url: "https://www.reactbits.dev/",
+            category: "Resources",
+            description:
+                "Similar to ShadCN - React components library built with TailwindCSS functionalities.",
+            dateAdded: "2024-01-15",
+            useCase:
+                "An easy way to speed up development of React applications.",
+            comments:
+                "The author has committed to making it an always-free resource.",
+        },
+        {
+            id: uuidv4(),
             title: "Can I Use",
             url: "https://caniuse.com",
             category: "Resources",
@@ -310,6 +334,145 @@ export const collections = {
                 "Essential for checking browser compatibility. Helps make informed decisions about using new features.",
             comments:
                 "The usage statistics and known issues sections have saved me from many cross-browser headaches.",
+        },
+        {
+            id: uuidv4(),
+            title: "UI Verse",
+            url: "https://uiverse.io",
+            category: "Resources",
+            description: "A collection of free UI components for web design.",
+            dateAdded: "2025-02-09",
+            useCase: "Perfect for finding UI components for web design.",
+            comments:
+                "The components are well-designed and customizable. Great for adding visual elements to projects.",
+        },
+        {
+            id: uuidv4(),
+            title: "Pixcap",
+            url: "https://pixcap.com",
+            category: "Resources",
+            description:
+                "A free stock photo website with a vast collection of high-quality 3D images.",
+            dateAdded: "2024-01-15",
+            useCase:
+                "Ideal for adding 3D images to web projects. The search functionality is very user-friendly.",
+            comments:
+                "The images are of high quality and can be easily customized to fit project needs.",
+        },
+        {
+            id: uuidv4(),
+            title: "Viewport UI",
+            url: "https://viewport-ui.design",
+            category: "Resources",
+            description:
+                "A collection of UI designs that are popular in the industry.",
+            dateAdded: "2025-02-09",
+            useCase:
+                "Helps with finding inspiration for UI design. The designs are well-structured and easy to navigate.",
+            comments:
+                "The designs are well-structured and easy to navigate. Great for finding inspiration for UI design.",
+        },
+        {
+            id: uuidv4(),
+            title: "DesignSpells",
+            url: "https://designspells.com",
+            category: "Resources",
+            description:
+                "A collection of micro-interactions and animations for web design.",
+            dateAdded: "2024-01-15",
+            useCase: "Perfect for adding micro-interactions to web projects.",
+            comments: "The animations are well-designed and customizable.",
+        },
+        {
+            id: uuidv4(),
+            title: "Cofolios",
+            url: "https://cofolios.com",
+            category: "Resources",
+            description: "A collection portfolios of web designers.",
+            dateAdded: "2025-02-09",
+            useCase: "Helps with finding inspiration for web design.",
+            comments:
+                "The portfolios are well-structured and easy to navigate.",
+        },
+        {
+            id: uuidv4(),
+            title: "ShadCN",
+            url: "https://ui.shadcn.com/",
+            category: "Resources",
+            description: "A collection of UI components.",
+            dateAdded: "2024-01-15",
+            useCase: "Perfect for adding UI components to web projects.",
+            comments: "The components are well-designed and customizable.",
+        },
+    ],
+    AI: [
+        {
+            id: uuidv4(),
+            titile: "Speechma",
+            url: "https://speechma.com/",
+            category: "AI Tools",
+            description:
+                "Speechma is a new text-to-speech tool and it's totally free! Just like ElevenLabs, but without the price tag.",
+            dateAdded: "2024-01-15",
+            useCase:
+                "Perfect for creating voiceovers for videos, podcasts, or audiobooks. The natural sounding voices are a game-changer.",
+            comments:
+                "The voices are natural and the interface is user-friendly. Great for creating engaging audio content.",
+        },
+        {
+            id: uuidv4(),
+            title: "Hugging Face",
+            url: "https://huggingface.co/",
+            category: "AI Tools",
+            description:
+                "A platform for building, training, and deploying AI models.",
+            dateAdded: "2024-01-15",
+            useCase: "Perfect for building and training AI models.",
+            comments: "The platform is well-designed and easy to use.",
+        },
+    ],
+    Learning: [
+        {
+            id: uuidv4(),
+            title: "Hacksplaining",
+            url: "https://www.hacksplaining.com",
+            category: "Learning",
+            description:
+                "A free online training platform for learning about security concepts and techniques.",
+            dateAdded: "2025-02-09",
+            useCase:
+                "Perfect for learning about security concepts and techniques.",
+            comments:
+                "The interactive exercises and real-world examples make it easy to understand security concepts.",
+        },
+    ],
+    Libraries: [
+        {
+            id: uuidv4(),
+            title: "Mousetrap",
+            url: "https://craig.is/killing/mice",
+            category: "Libraries",
+            description:
+                "A Javascript library for handling keyboard shortcuts.",
+            dateAdded: "2024-01-15",
+            useCase:
+                "Perfect for handling keyboard shortcuts in web applications.",
+            comments: "The library is well-documented and easy to use.",
+        },
+    ],
+    Miscellaneous: [
+        {
+            id: uuidv4(),
+            title: "Credit Card Generator",
+            url: "https://akto.io/tools/credit-card-generator",
+            category: "Miscellaneous",
+            description:
+                "A tool for generating fake credit card numbers for testing purposes.",
+            dateAdded: "2025-02-09",
+            useCase:
+                "Perfect for testing payment gateways and handling payments in development environments.",
+            comments:
+                "The generated numbers are valid and can be used in various testing scenarios.",
         },
     ],
 };
