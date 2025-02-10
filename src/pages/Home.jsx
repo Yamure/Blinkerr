@@ -8,6 +8,9 @@ import {
     MobileIllustration,
 } from "@components/illustrations";
 
+import Card from "../components/CopyPasta/Card";
+import { copyPastas } from "@/data/copypasta";
+
 const Home = () => {
     const favourites = useSelector(selectFavourites);
 
@@ -16,6 +19,9 @@ const Home = () => {
             <Navigation currentPage="home" />
             <MobileIllustration />
             <DynamicIllustration />
+            {copyPastas.map((copypasta) => (
+                <Card key={copypasta.id} link={copypasta} />
+            ))}
 
             <main className="max-w-7xl mx-auto px-6 py-8 relative z-10 h-screen overflow-y-auto md:h-auto md:overflow-visible">
                 <div className="space-y-12">
