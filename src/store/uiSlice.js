@@ -1,11 +1,11 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const uiSlice = createSlice({
-  name: 'ui',
+  name: "ui",
   initialState: {
     isLoading: false,
-    searchQuery: '',
-    activeCategory: 'all',
+    searchQuery: "",
+    activeCategory: "all",
   },
   reducers: {
     setLoading: (state, action) => {
@@ -20,6 +20,7 @@ const uiSlice = createSlice({
   },
 });
 
-export const { setLoading, setSearchQuery, setActiveCategory } = uiSlice.actions;
+export const { setLoading, setSearchQuery, setActiveCategory } =
+  uiSlice.actions;
 export const selectUI = (state) => state.ui;
 export default uiSlice.reducer;

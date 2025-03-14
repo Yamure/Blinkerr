@@ -4,7 +4,6 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 import { fileURLToPath } from "url";
 
-
 // who ever chooses to updated the aliases please update in the order of the folder structure in the src folder
 // this is to make it easier to find the aliases
 

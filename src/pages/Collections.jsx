@@ -35,7 +35,7 @@ const Collections = () => {
   // Filter links based on search query and active category with safety checks
   const filteredLinks = Object.entries(collections)
     .flatMap(([category, items]) =>
-      activeCategory === "all" || activeCategory === category ? items : []
+      activeCategory === "all" || activeCategory === category ? items : [],
     )
     .filter((link) => {
       // First verify the link has all required properties

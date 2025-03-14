@@ -349,7 +349,7 @@ const CardActions = memo(
         </button>
       </div>
     );
-  }
+  },
 );
 
 Modal.propTypes = {
