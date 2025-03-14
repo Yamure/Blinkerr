@@ -1,10 +1,10 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import * as Pages from "@pages";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import * as Pages from '@pages';
 
 const routes = [
-  { path: "/", element: <Pages.Home /> },
-  { path: "/collections", element: <Pages.Collections /> },
-  { path: "/about", element: <Pages.About /> },
+  { path: '/', element: <Pages.Home /> },
+  { path: '/collections', element: <Pages.Collections /> },
+  { path: '/about', element: <Pages.About /> },
 ];
 
 const AppRoutes = () => {

@@ -1,5 +1,5 @@
-import { useDispatch, useSelector } from "react-redux";
-import { setSearchQuery, selectUI } from "@/store/uiSlice";
+import { useDispatch, useSelector } from 'react-redux';
+import { setSearchQuery, selectUI } from '@/store/uiSlice';
 
 const SearchBar = () => {
   const dispatch = useDispatch();
@@ -12,11 +12,9 @@ const SearchBar = () => {
         value={searchQuery}
         onChange={(e) => dispatch(setSearchQuery(e.target.value))}
         placeholder="Search resources..."
-        className="w-full px-4 py-2 text-sm text-text-900 font-body bg-custom-bg/80 backdrop-blur-xs rounded-lg
-          border border-primary outline-hidden focus:ring-2 ring-primary-400 transition-all
-          placeholder:text-text-400"
+        className="text-text-900 font-body bg-custom-bg/80 border-primary ring-primary-400 placeholder:text-text-400 w-full rounded-lg border px-4 py-2 text-sm outline-hidden backdrop-blur-xs transition-all focus:ring-2"
       />
-      <kbd className="absolute right-4 top-1/2 -translate-y-1/2 text-[10px] font-body text-text-400 bg-primary-100 px-1.5 py-0.5 rounded-sm">
+      <kbd className="font-body text-text-400 bg-primary-100 absolute top-1/2 right-4 -translate-y-1/2 rounded-sm px-1.5 py-0.5 text-[10px]">
         /
       </kbd>
     </div>

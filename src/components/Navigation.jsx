@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
-import SearchBar from "@components/SearchBar";
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import SearchBar from '@components/SearchBar';
 
 const Navigation = ({ currentPage }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,49 +10,49 @@ const Navigation = ({ currentPage }) => {
     <>
       {/* White overlay when menu is open */}
       <div
-        className={`fixed inset-0 bg-custom-bg/50 backdrop-blur-xs transition-opacity duration-300 md:hidden ${
+        className={`bg-custom-bg/50 fixed inset-0 backdrop-blur-xs transition-opacity duration-300 md:hidden ${
           isOpen
-            ? "opacity-100 visible"
-            : "opacity-0 invisible pointer-events-none"
+            ? 'visible opacity-100'
+            : 'pointer-events-none invisible opacity-0'
         }`}
         style={{ zIndex: 45 }}
       />
 
       <nav
-        className="sticky top-0 bg-custom-bg/80 backdrop-blur-xs"
+        className="bg-custom-bg/80 sticky top-0 backdrop-blur-xs"
         style={{ zIndex: 50 }}
       >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center justify-between py-4 relative">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="relative flex items-center justify-between py-4">
             {/* Logo */}
             <Link
               to="/"
-              className="text-base font-heading font-medium hover:text-text-900 transition-colors no-underline shrink-0"
+              className="font-heading hover:text-text-900 shrink-0 text-base font-medium no-underline transition-colors"
             >
               <span className="text-text-900">ScientficDevs</span>
               <span className="text-green-500">/F</span>
             </Link>
 
             {/* Desktop - Right Side Content */}
-            <div className="font-heading hidden md:flex items-center space-x-6 flex-1 justify-end">
+            <div className="font-heading hidden flex-1 items-center justify-end space-x-6 md:flex">
               {/* Search Bar - Desktop */}
-              {currentPage === "collections" && (
+              {currentPage === 'collections' && (
                 <div className="w-72">
                   <SearchBar />
                 </div>
               )}
 
               {/* Navigation Links */}
-              <div className="font-heading flex items-center space-x-6 pl-6 border-l border-primary-200">
+              <div className="font-heading border-primary-200 flex items-center space-x-6 border-l pl-6">
                 <Link
                   to="/collections"
-                  className="text-base text-text-500 hover:text-text-900 transition-colors no-underline whitespace-nowrap"
+                  className="text-text-500 hover:text-text-900 text-base whitespace-nowrap no-underline transition-colors"
                 >
                   Collections
                 </Link>
                 <Link
                   to="/about"
-                  className="text-base text-text-500 hover:text-text-900 transition-colors no-underline whitespace-nowrap"
+                  className="text-text-500 hover:text-text-900 text-base whitespace-nowrap no-underline transition-colors"
                 >
                   About
                 </Link>
@@ -62,13 +62,13 @@ const Navigation = ({ currentPage }) => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 text-zinc-500 hover:text-zinc-900 relative"
+              className="relative p-2 text-zinc-500 hover:text-zinc-900 md:hidden"
               style={{ zIndex: 60 }}
               aria-label="Toggle menu"
             >
               <svg
-                className={`w-5 h-5 transition-colors duration-300 ${
-                  isOpen ? "text-zinc-900" : "text-zinc-500"
+                className={`h-5 w-5 transition-colors duration-300 ${
+                  isOpen ? 'text-zinc-900' : 'text-zinc-500'
                 }`}
                 fill="none"
                 strokeLinecap="round"
@@ -87,8 +87,8 @@ const Navigation = ({ currentPage }) => {
           </div>
 
           {/* Search Bar - Mobile */}
-          {currentPage === "collections" && (
-            <div className="md:hidden pb-4">
+          {currentPage === 'collections' && (
+            <div className="pb-4 md:hidden">
               <SearchBar />
             </div>
           )}
@@ -96,31 +96,31 @@ const Navigation = ({ currentPage }) => {
 
         {/* Mobile Navigation Menu */}
         <div
-          className={`fixed inset-0 bg-custom-bg transition-all duration-300 md:hidden ${
+          className={`bg-custom-bg fixed inset-0 transition-all duration-300 md:hidden ${
             isOpen
-              ? "opacity-100 visible"
-              : "opacity-0 invisible pointer-events-none"
+              ? 'visible opacity-100'
+              : 'pointer-events-none invisible opacity-0'
           }`}
           style={{ zIndex: 55 }}
         >
-          <div className="flex flex-col items-center justify-center h-screen space-y-8">
+          <div className="flex h-screen flex-col items-center justify-center space-y-8">
             <Link
               to="/"
-              className="text-xl font-medium text-zinc-900 hover:text-zinc-600 transition-colors"
+              className="text-xl font-medium text-zinc-900 transition-colors hover:text-zinc-600"
               onClick={() => setIsOpen(false)}
             >
               Home
             </Link>
             <Link
               to="/collections"
-              className="text-xl font-medium text-zinc-900 hover:text-zinc-600 transition-colors"
+              className="text-xl font-medium text-zinc-900 transition-colors hover:text-zinc-600"
               onClick={() => setIsOpen(false)}
             >
               Collections
             </Link>
             <Link
               to="/about"
-              className="text-xl font-medium text-zinc-900 hover:text-zinc-600 transition-colors"
+              className="text-xl font-medium text-zinc-900 transition-colors hover:text-zinc-600"
               onClick={() => setIsOpen(false)}
             >
               About

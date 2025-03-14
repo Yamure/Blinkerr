@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
-import { Coffee, ChaoticGood, Pilot, Plants, MechanicalLove } from "@assets";
+import { useState, useEffect } from 'react';
+import { Coffee, ChaoticGood, Pilot, Plants, MechanicalLove } from '@assets';
 
 const illustrations = [
-  { src: Coffee, alt: "Coffee illustration" },
-  { src: ChaoticGood, alt: "Chaotic Good illustration" },
-  { src: Pilot, alt: "Pilot illustration" },
-  { src: Plants, alt: "Plants illustration" },
-  { src: MechanicalLove, alt: "Mechanical Love illustration" },
+  { src: Coffee, alt: 'Coffee illustration' },
+  { src: ChaoticGood, alt: 'Chaotic Good illustration' },
+  { src: Pilot, alt: 'Pilot illustration' },
+  { src: Plants, alt: 'Plants illustration' },
+  { src: MechanicalLove, alt: 'Mechanical Love illustration' },
 ];
 
 const DynamicIllustration = () => {
@@ -26,11 +26,11 @@ const DynamicIllustration = () => {
   }, []);
 
   return (
-    <div className="hidden md:block fixed bottom-8 left-8 pointer-events-none">
+    <div className="pointer-events-none fixed bottom-8 left-8 hidden md:block">
       <img
         src={currentImage.src}
         alt={currentImage.alt}
-        className="w-24 h-24 opacity-50"
+        className="h-24 w-24 opacity-50"
       />
     </div>
   );
