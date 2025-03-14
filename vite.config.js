@@ -4,6 +4,10 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 import { fileURLToPath } from "url";
 
+
+// who ever chooses to updated the aliases please update in the order of the folder structure in the src folder
+// this is to make it easier to find the aliases
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -12,11 +16,13 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "src"),
-      "@pages": path.resolve(__dirname, "src/pages"),
-      "@components": path.resolve(__dirname, "src/components"),
       "@assets": path.resolve(__dirname, "src/assets"),
+      "@components": path.resolve(__dirname, "src/components"),
       "@data": path.resolve(__dirname, "src/data"),
+      "@pages": path.resolve(__dirname, "src/pages"),
+      "@store": path.resolve(__dirname, "src/store"),
+      "@styles": path.resolve(__dirname, "src/styles"),
+      "@": path.resolve(__dirname, "src"),
     },
   },
 });
