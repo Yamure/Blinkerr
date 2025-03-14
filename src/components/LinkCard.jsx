@@ -1,28 +1,27 @@
-import { useState, useEffect, memo, useRef } from 'react';
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useDispatch, useSelector } from 'react-redux';
-import { toggleFavourite, selectIsFavourite } from '@/store/favouritesSlice';
+import { selectIsFavourite, toggleFavourite } from '@/store/favouritesSlice';
 import {
-  Chrome,
-  Code,
-  Paintbrush,
-  Zap,
+  BookOpen,
   Bot,
-  Rocket,
-  Terminal,
-  Layout,
-  Database,
+  Chrome,
   Cloud,
+  Code,
+  Database,
+  ExternalLink,
   Globe,
   Info,
-  Star,
-  BookOpen,
-  Pencil,
+  Layout,
   Lightbulb,
-  ExternalLink,
+  Paintbrush,
+  Pencil,
+  Rocket,
+  Star,
+  Terminal,
   X,
+  Zap,
 } from 'lucide-react';
+import PropTypes from 'prop-types';
+import React, { memo, useEffect, useRef, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 const categoryConfig = {
   colors: {

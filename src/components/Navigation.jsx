@@ -1,7 +1,7 @@
+import SearchBar from '@components/SearchBar';
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import SearchBar from '@components/SearchBar';
 
 const Navigation = ({ currentPage }) => {
   const [isOpen, setIsOpen] = useState(false);

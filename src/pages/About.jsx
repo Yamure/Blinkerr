@@ -1,11 +1,11 @@
-import Navigation from '@components/Navigation';
 import {
-  Pondering,
-  Reflecting,
   MeelaPantalones,
   Pacheco,
   PolkaPup,
+  Pondering,
+  Reflecting,
 } from '@assets';
+import Navigation from '@components/Navigation';
 
 const About = () => {
   return (

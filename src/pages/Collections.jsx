@@ -1,14 +1,14 @@
-import { useDispatch, useSelector } from 'react-redux';
 import { selectUI, setActiveCategory } from '@/store/uiSlice';
 import LinkCard from '@components/LinkCard';
 import Navigation from '@components/Navigation';
-import { collections } from '@data/collections';
 import ScrollToTop from '@components/ScrollToTop';
 import {
   CollectionsIllustration,
   CollectionsMobileIllustration,
 } from '@components/illustrations';
+import { collections } from '@data/collections';
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 // Category colors mapping
 const categoryColors = {

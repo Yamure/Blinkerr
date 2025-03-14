@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import * as Pages from '@pages';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
 const routes = [
   { path: '/', element: <Pages.Home /> },

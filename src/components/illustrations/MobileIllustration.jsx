@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Coffee, ChaoticGood, Pilot, Plants, MechanicalLove } from '@assets';
+import { ChaoticGood, Coffee, MechanicalLove, Pilot, Plants } from '@assets';
+import { useEffect, useState } from 'react';
 
 const illustrations = [
   { src: Coffee, alt: 'Coffee illustration' },

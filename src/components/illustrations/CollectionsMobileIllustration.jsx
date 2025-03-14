@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Experiments, LookingAhead, Rogue, NewBeginnings, Whoa } from '@assets';
+import { Experiments, LookingAhead, NewBeginnings, Rogue, Whoa } from '@assets';
+import { useEffect, useState } from 'react';
 
 const illustrations = [
   { src: Rogue, alt: 'Rogue illustration' },

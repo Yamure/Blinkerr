@@ -1,12 +1,12 @@
-import LinkCard from '@components/LinkCard';
-import Navigation from '@components/Navigation';
-import { useSelector } from 'react-redux';
+import { guysFavs, yamusFavs } from '@/data/favourites';
 import { selectFavourites } from '@/store/favouritesSlice';
-import { yamusFavs, guysFavs } from '@/data/favourites';
 import {
   DynamicIllustration,
   MobileIllustration,
 } from '@components/illustrations';
+import LinkCard from '@components/LinkCard';
+import Navigation from '@components/Navigation';
+import { useSelector } from 'react-redux';
 
 const Home = () => {
   const favourites = useSelector(selectFavourites);
