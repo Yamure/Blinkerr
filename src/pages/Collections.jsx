@@ -65,7 +65,7 @@ const Collections = () => {
           <div className="relative z-50">
             <button
               onClick={() => setIsCategoryMenuOpen(!isCategoryMenuOpen)}
-              className="flex items-center gap-2 px-4 py-2 bg-white/50 backdrop-blur-sm rounded-lg hover:bg-white/60 transition-all"
+              className="flex items-center gap-2 px-4 py-2 bg-white/50 backdrop-blur-xs rounded-lg hover:bg-white/60 transition-all"
             >
               <span
                 className="font-heading"

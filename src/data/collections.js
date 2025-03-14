@@ -243,7 +243,7 @@ export const collections = {
       useCase:
         "Every tailwind beginner needs to have this in their resource list because of it's extensive documentation on how to use Tailwind effectively.",
       comments:
-        "I sometimes use this as inspiration. I  use the docs to remind myself that I can have a rounded corner on the card component I'm creating.",
+        "I sometimes use this as inspiration. I  use the docs to remind myself that I can have a rounded-sm corner on the card component I'm creating.",
     },
     {
       id: uuidv4(),

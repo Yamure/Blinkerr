@@ -57,15 +57,15 @@ const categoryConfig = {
 };
 
 const CardSkeleton = () => (
-  <div className="p-4 sm:p-6 rounded-xl bg-custom-bg/80 backdrop-blur-sm animate-pulse">
+  <div className="p-4 sm:p-6 rounded-xl bg-custom-bg/80 backdrop-blur-xs animate-pulse">
     <div className="flex items-start mb-4 space-x-3">
       <div className="w-10 h-10 rounded-lg bg-primary-200 shrink-0" />
       <div className="flex-1 min-w-0">
-        <div className="w-24 h-4 rounded bg-primary-200" />
-        <div className="w-16 h-3 mt-2 rounded bg-primary-200" />
+        <div className="w-24 h-4 rounded-sm bg-primary-200" />
+        <div className="w-16 h-3 mt-2 rounded-sm bg-primary-200" />
       </div>
     </div>
-    <div className="h-16 rounded bg-primary-200" />
+    <div className="h-16 rounded-sm bg-primary-200" />
   </div>
 );
 
@@ -87,11 +87,11 @@ const Modal = ({ link, onClose, color }) => {
 
   return (
     <div
-      className="fixed inset-0 z-[100] h-screen touch-none"
+      className="fixed inset-0 z-100 h-screen touch-none"
       style={{ position: "fixed", height: "100dvh" }}
     >
       <div
-        className="fixed inset-0 bg-custom-bg/30 backdrop-blur-sm transition-opacity duration-200"
+        className="fixed inset-0 bg-custom-bg/30 backdrop-blur-xs transition-opacity duration-200"
         onClick={onClose}
       />
       <div className="fixed inset-0 flex items-center justify-center p-4 overscroll-none">
@@ -120,7 +120,7 @@ const ModalHeader = ({ link, color }) => {
   return (
     <div className="flex items-center gap-4 mb-6">
       <div
-        className="flex size-12 items-center justify-center rounded-md text-white shadow-sm"
+        className="flex size-12 items-center justify-center rounded-md text-white shadow-xs"
         style={{ backgroundColor: color }}
       >
         <Icon className="size-5" />
@@ -160,7 +160,7 @@ const ModalContent = ({ link }) => (
         href={link.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center px-4 py-2 text-sm font-medium font-heading uppercase text-text-900 bg-white/80 hover:bg-white/90 rounded-lg transition-colors backdrop-blur-sm"
+        className="inline-flex items-center px-4 py-2 text-sm font-medium font-heading uppercase text-text-900 bg-white/80 hover:bg-white/90 rounded-lg transition-colors backdrop-blur-xs"
       >
         Visit Website
         <ExternalLink className="size-4 ml-2" />
@@ -170,7 +170,7 @@ const ModalContent = ({ link }) => (
 );
 
 const InfoSection = memo(({ title, content }) => (
-  <div className="bg-white/50 backdrop-blur-sm rounded-lg p-4">
+  <div className="bg-white/50 backdrop-blur-xs rounded-lg p-4">
     <h3 className="text-base font-medium font-heading text-text-900 mb-2">
       {title}
     </h3>
@@ -244,7 +244,7 @@ const LinkCard = ({ link, loading = false }) => {
   return (
     <ErrorBoundary>
       <div
-        className="relative p-4 sm:p-6 min-h-42 rounded-xl hover:-translate-y-1 hover:shadow-lg transition-all bg-white/90 backdrop-blur-sm group"
+        className="relative p-4 sm:p-6 min-h-42 rounded-xl hover:-translate-y-1 hover:shadow-lg transition-all bg-white/90 backdrop-blur-xs group"
         style={{ backgroundColor: `${color}20` }}
       >
         <div
@@ -257,7 +257,7 @@ const LinkCard = ({ link, loading = false }) => {
         <div className="relative z-10">
           <div className="flex items-center gap-3 mb-4">
             <div
-              className="flex size-10 items-center justify-center text-white rounded-lg shadow-sm shrink-0 transition group-hover:scale-110"
+              className="flex size-10 items-center justify-center text-white rounded-lg shadow-xs shrink-0 transition group-hover:scale-110"
               style={{ backgroundColor: color }}
             >
               <Icon className="size-5" />

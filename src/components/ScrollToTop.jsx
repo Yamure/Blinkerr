@@ -19,7 +19,7 @@ const ScrollToTop = () => {
   return isVisible ? (
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      className="fixed bottom-4 right-4 p-2 bg-white/80 backdrop-blur-sm rounded-full shadow-md z-50 hover:shadow-lg transition-all"
+      className="fixed bottom-4 right-4 p-2 bg-white/80 backdrop-blur-xs rounded-full shadow-md z-50 hover:shadow-lg transition-all"
     >
       <svg
         className="w-5 h-5"

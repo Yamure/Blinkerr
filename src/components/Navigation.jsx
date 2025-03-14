@@ -10,7 +10,7 @@ const Navigation = ({ currentPage }) => {
         <>
             {/* White overlay when menu is open */}
             <div
-                className={`fixed inset-0 bg-custom-bg/50 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
+                className={`fixed inset-0 bg-custom-bg/50 backdrop-blur-xs transition-opacity duration-300 md:hidden ${
                     isOpen
                         ? "opacity-100 visible"
                         : "opacity-0 invisible pointer-events-none"
@@ -19,7 +19,7 @@ const Navigation = ({ currentPage }) => {
             />
 
             <nav
-                className="sticky top-0 bg-custom-bg/80 backdrop-blur-sm"
+                className="sticky top-0 bg-custom-bg/80 backdrop-blur-xs"
                 style={{ zIndex: 50 }}
             >
                 <div className="max-w-7xl mx-auto px-6">

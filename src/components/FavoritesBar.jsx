@@ -34,7 +34,7 @@ const FavoritesBar = () => {
     if (favourites.length === 0) return null;
 
     return (
-        <div className="fixed bottom-0 left-0 right-0 z-40 border-t bg-custom-bg/80 backdrop-blur-sm border-primary-200/50">
+        <div className="fixed bottom-0 left-0 right-0 z-40 border-t bg-custom-bg/80 backdrop-blur-xs border-primary-200/50">
             <div className="px-6 py-4 mx-auto max-w-7xl">
                 <div className="flex items-center space-x-4">
                     <h3 className="text-xs font-medium font-heading text-text-900">
@@ -50,7 +50,7 @@ const FavoritesBar = () => {
                                 className="flex items-center space-x-2 px-3 py-1.5 rounded-md bg-white/50 hover:bg-white transition-colors border border-zinc-200/50"
                             >
                                 <div
-                                    className="w-4 h-4 rounded flex items-center justify-center text-[10px] text-white"
+                                    className="w-4 h-4 rounded-sm flex items-center justify-center text-[10px] text-white"
                                     style={{
                                         backgroundColor: `${getColourForCategory(
                                             favourite.category

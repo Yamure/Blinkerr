@@ -47,7 +47,7 @@ const About = () => {
             <main className="relative z-20 max-w-3xl mx-auto px-6 py-12">
                 <div className="space-y-6">
                     {/* Project Info */}
-                    <section className="bg-white/80 backdrop-blur-sm rounded-lg p-5 border border-zinc-200/50">
+                    <section className="bg-white/80 backdrop-blur-xs rounded-lg p-5 border border-zinc-200/50">
                         <div className="flex items-center space-x-2 mb-4">
                             <div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
                             <h2 className="text-base font-medium font-heading text-text-900">
@@ -69,7 +69,7 @@ const About = () => {
                     </section>
 
                     {/* Tech Stack */}
-                    <section className="bg-white/80 backdrop-blur-sm rounded-lg p-5 border border-zinc-200/50">
+                    <section className="bg-white/80 backdrop-blur-xs rounded-lg p-5 border border-zinc-200/50">
                         <div className="flex items-center space-x-2 mb-4">
                             <div className="w-1.5 h-1.5 bg-green-500 rounded-full" />
                             <h2 className="text-base font-medium font-heading text-text-900">
@@ -117,7 +117,7 @@ const About = () => {
                     </section>
 
                     {/* Creator */}
-                    <section className="bg-white/80 backdrop-blur-sm rounded-lg p-5 border border-zinc-200/50">
+                    <section className="bg-white/80 backdrop-blur-xs rounded-lg p-5 border border-zinc-200/50">
                         <div className="flex items-center space-x-2 mb-4">
                             <div className="w-1.5 h-1.5 bg-purple-500 rounded-full" />
                             <h2 className="text-base font-medium font-heading text-text-900">
