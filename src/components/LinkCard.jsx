@@ -1,4 +1,4 @@
-import { selectIsFavourite, toggleFavourite } from '@/store/favouritesSlice';
+import { selectIsFavourite, toggleFavourite } from '@slices/favourites';
 import {
   BookOpen,
   Bot,

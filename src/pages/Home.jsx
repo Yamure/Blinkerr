@@ -1,5 +1,5 @@
 import { guysFavs, yamusFavs } from '@/data/favourites';
-import { selectFavourites } from '@/store/favouritesSlice';
+import { selectFavourites } from '@slices/favourites';
 import {
   DynamicIllustration,
   MobileIllustration,

@@ -1,4 +1,4 @@
-import { selectUI, setActiveCategory } from '@/store/uiSlice';
+import { selectUI, setActiveCategory } from '@slices/ui';
 import LinkCard from '@components/LinkCard';
 import Navigation from '@components/Navigation';
 import ScrollToTop from '@components/ScrollToTop';

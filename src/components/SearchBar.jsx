@@ -1,4 +1,4 @@
-import { selectUI, setSearchQuery } from '@/store/uiSlice';
+import { selectUI, setSearchQuery } from '@slices/ui';
 import { useDispatch, useSelector } from 'react-redux';
 
 const SearchBar = () => {

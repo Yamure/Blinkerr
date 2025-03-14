@@ -20,6 +20,7 @@ export default defineConfig({
       '@data': path.resolve(__dirname, 'src/data'),
       '@pages': path.resolve(__dirname, 'src/pages'),
       '@store': path.resolve(__dirname, 'src/store'),
+      '@slices': path.resolve(__dirname, 'src/store/slices'),
       '@': path.resolve(__dirname, 'src'),
     },
   },
