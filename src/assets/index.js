@@ -35,4 +35,3 @@ export { default as Runner } from './herosvg/Runner.svg';
 export { default as Waiting } from './herosvg/Waiting.svg';
 export { default as WalkingContradiction } from './herosvg/Walking Contradiction.svg';
 export { default as Whoa } from './herosvg/Whoa.svg';
-

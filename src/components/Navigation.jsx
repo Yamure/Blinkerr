@@ -29,8 +29,7 @@ const Navigation = ({ currentPage }) => {
               to="/"
               className="font-heading hover:text-text-900 shrink-0 text-base font-medium no-underline transition-colors"
             >
-              <span className="text-text-900">ScientficDevs</span>
-              <span className="text-green-500">/F</span>
+              <span className="text-text-900">Blinkerr</span>
             </Link>
 
             {/* Desktop - Right Side Content */}
