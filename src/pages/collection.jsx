@@ -1,4 +1,3 @@
-import { selectUI, setActiveCategory } from '@slices/ui';
 import LinkCard from '@components/LinkCard';
 import Navigation from '@components/Navigation';
 import ScrollToTop from '@components/ScrollToTop';
@@ -7,6 +6,7 @@ import {
   CollectionsMobileIllustration,
 } from '@components/illustrations';
 import { collections } from '@data/collections';
+import { selectUI, setActiveCategory } from '@slices/ui';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -27,7 +27,7 @@ const categoryColors = {
   AI: '#9C27B0', // Adding AI category with a purple color
 };
 
-const Collections = () => {
+const Collection = () => {
   const dispatch = useDispatch();
   const { searchQuery, activeCategory } = useSelector(selectUI);
   const [isCategoryMenuOpen, setIsCategoryMenuOpen] = useState(false);
@@ -161,4 +161,4 @@ const Collections = () => {
   );
 };
 
-export default Collections;
+export default Collection;
