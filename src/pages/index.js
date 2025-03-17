@@ -1,3 +1,3 @@
-export { default as About } from './about';
-export { default as Collections } from './collections';
-export { default as Home } from './home';
+export { default as About } from '@pages/about';
+export { default as Collections } from '@pages/collections';
+export { default as Home } from '@pages/home';

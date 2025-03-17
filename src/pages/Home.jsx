@@ -1,4 +1,4 @@
-import { guysFavs, yamusFavs } from '@/data/favourites';
+import { guysFavs, yamusFavs } from '@data/favourites';
 import { selectFavourites } from '@slices/favourites';
 import {
   DynamicIllustration,
