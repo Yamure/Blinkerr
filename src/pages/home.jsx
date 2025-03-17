@@ -1,11 +1,11 @@
-import { guysFavs, yamusFavs } from '@data/favourites';
-import { selectFavourites } from '@slices/favourites';
 import {
   DynamicIllustration,
   MobileIllustration,
 } from '@components/illustrations';
 import LinkCard from '@components/LinkCard';
 import Navigation from '@components/Navigation';
+import { guysFavs, yamusFavs } from '@data/favourites';
+import { selectFavourites } from '@slices/favourites';
 import { useSelector } from 'react-redux';
 
 const Home = () => {
